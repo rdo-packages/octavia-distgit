@@ -2,20 +2,16 @@
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-# Liberty semver reset
-# https://review.openstack.org/#/q/I6a35fa0dda798fad93b804d00a46af80f08d475c,n,z
-Epoch:      1
 Version:    XXX
 Release:    XXX
-Summary:    OpenStack LBaaSv2 Service
+Summary:    Octavia, a load balancer implementation for OpenStack
 
-Group:      Applications/System
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
 Source0:    http://tarballs.openstack.org/%{service}/%{service}-master.tar.gz
 Source1:    %{service}.logrotate
-Source10:   amphora-agent.service
+Source10:   octavia-amphora-agent.service
 Source11:   octavia-api.service
 Source12:   octavia-worker.service
 Source13:   octavia-health-manager.service
@@ -31,8 +27,7 @@ BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
 
-Requires:   python-%{service} = %{epoch}:%{version}-%{release}
-Requires:   openstack-utils
+Requires:   python-%{service} = %{version}-%{release}
 
 Requires(pre): shadow-utils
 Requires(post): systemd
@@ -54,7 +49,7 @@ Requires:   python-pbr >= 0.11
 Requires:   python-sqlalchemy >= 0.9.7
 Requires:   python-anyjson >= 0.3.3
 Requires:   python-babel >= 1.3
-Requires:   python-eventlet >= 0.17.4
+Requires:   python-eventlet >= 0.17.3
 Requires:   python-requests >= 2.5.2
 Requires:   python-iso8601 >= 0.1.9
 Requires:   python-jsonrpclib
@@ -74,13 +69,13 @@ Requires:   python-oslo-middleware >= 1.2.0
 Requires:   python-oslo-rootwrap >= 2.0.0
 Requires:   python-oslo-serialization >= 1.4.0
 Requires:   python-oslo-utils >= 1.6.0
-Requires:   python-pymysql >= 0.6.2
+Requires:   MySQL-python >= 0.6.2
 Requires:   python-barbicanclient >= 3.0.1
 Requires:   python-keystoneclient >= 1.6.0
 Requires:   python-novaclient >= 2.22.0
 Requires:   python-posix_ipc
 Requires:   pyOpenSSL >= 0.11
-Requires:   python-wsme >= 0.7
+Requires:   python-wsme
 Requires:   python-pyasn1
 Requires:   python-pyasn1-modules
 Requires:   python-jinja2 >= 2.6
@@ -101,7 +96,7 @@ This package contains the Octavia Python library.
 Summary:    Octavia tests
 Group:      Applications/System
 
-Requires:   python-%{service} = %{epoch}:%{version}-%{release}
+Requires:   python-%{service} = %{version}-%{release}
 
 
 %description -n python-%{service}-tests
@@ -114,7 +109,7 @@ This package contains Octavia test files.
 Summary:    Octavia common files
 Group:      Applications/System
 
-Requires:   python-%{service} = %{epoch}:%{version}-%{release}
+Requires:   python-%{service} = %{version}-%{release}
 
 
 %description common
@@ -128,7 +123,7 @@ This package contains Octavia files common to all services.
 Summary:    OpenStack Octavia Amphora Agent service
 Group:      Applications/System
 
-Requires:   openstack-%{service}-common = %{epoch}:%{version}-%{release}
+Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
 %description amphora-agent
@@ -142,7 +137,7 @@ This package contains OpenStack Octavia Amphora Agent service.
 Summary:    OpenStack Octavia API service
 Group:      Applications/System
 
-Requires:   openstack-%{service}-common = %{epoch}:%{version}-%{release}
+Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
 %description api
@@ -155,7 +150,7 @@ This package contains OpenStack Octavia API service.
 Summary:    OpenStack Octavia Consumer service
 Group:      Applications/System
 
-Requires:   openstack-%{service}-common = %{epoch}:%{version}-%{release}
+Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
 %description worker
@@ -168,7 +163,7 @@ This package contains OpenStack Octavia Consumer service.
 Summary:    OpenStack Octavia Health-Manager service
 Group:      Applications/System
 
-Requires:   openstack-%{service}-common = %{epoch}:%{version}-%{release}
+Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
 %description health-manager
@@ -181,7 +176,7 @@ This package contains OpenStack Octavia Health-Manager service.
 Summary:    OpenStack Octavia Housekeeping service
 Group:      Applications/System
 
-Requires:   openstack-%{service}-common = %{epoch}:%{version}-%{release}
+Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
 %description housekeeping
@@ -223,14 +218,13 @@ rm -rf %{buildroot}%{python2_sitelib}/tools
 
 # Move config files to proper location
 install -d -m 755 %{buildroot}%{_sysconfdir}/%{service}
-#mv %{buildroot}/usr/etc/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
-mv etc/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
+mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
 
 # Install systemd units
-install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/amphora-agent.service
+install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/octavia-amphora-agent.service
 install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/octavia-api.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/octavia-worker.service
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/octavia-health-manager.service
@@ -246,6 +240,12 @@ install -d -m 755 %{buildroot}%{_localstatedir}/run/%{service}
 install -p -D -m 640 %{SOURCE30} %{buildroot}%{_datadir}/%{service}/%{service}-dist.conf
 
 
+# Create configuration directories for all services that can be populated by users with custom *.conf files
+mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/common
+for service in amphora-agent api health-manager housekeeping worker; do
+    mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/%{service}-$service
+done
+
 %pre common
 getent group %{service} >/dev/null || groupadd -r %{service}
 getent passwd %{service} >/dev/null || \
@@ -255,15 +255,15 @@ exit 0
 
 
 %post amphora-agent
-%systemd_post amphora-agent.service
+%systemd_post octavia-amphora-agent.service
 
 
 %preun amphora-agent
-%systemd_preun amphora-agent.service
+%systemd_preun octavia-amphora-agent.service
 
 
 %postun amphora-agent
-%systemd_postun_with_restart amphora-agent.service
+%systemd_postun_with_restart octavia-amphora-agent.service
 
 
 %post api
@@ -337,35 +337,39 @@ exit 0
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
 
-
 %files amphora-agent
 %license LICENSE
 %{_bindir}/amphora-agent
-%{_unitdir}/amphora-agent.service
+%{_unitdir}/octavia-amphora-agent.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
 
 
 %files api
 %license LICENSE
 %{_bindir}/octavia-api
 %{_unitdir}/octavia-api.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-api
 
 
 %files worker
 %license LICENSE
 %{_bindir}/octavia-worker
 %{_unitdir}/octavia-worker.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-worker
 
 
 %files health-manager
 %license LICENSE
 %{_bindir}/octavia-health-manager
 %{_unitdir}/octavia-health-manager.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-health-manager
 
 
 %files housekeeping
 %license LICENSE
 %{_bindir}/octavia-housekeeping
 %{_unitdir}/octavia-housekeeping.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-housekeeping
 
 
 %changelog
