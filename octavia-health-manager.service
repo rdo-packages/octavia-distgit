@@ -5,7 +5,7 @@ After=syslog.target network.target
 [Service]
 Type=simple
 User=octavia
-ExecStart=/usr/bin/octavia-health-manager --config-file /usr/share/octavia/octavia-dist.conf --config-dir /usr/share/octavia/octavia-health-manager --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/common --config-dir /etc/octavia/conf.d/octavia-health-manager --log-file /var/log/octavia/octavia-health-manager.log
+ExecStart=/usr/bin/octavia-health-manager --config-file /usr/share/octavia/octavia-dist.conf --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/common --config-dir /etc/octavia/conf.d/octavia-health-manager --log-file /var/log/octavia/health-manager.log
 PrivateTmp=false
 KillMode=process
 
