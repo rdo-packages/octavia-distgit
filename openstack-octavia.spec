@@ -69,7 +69,6 @@ Requires:   python-oslo-middleware >= 1.2.0
 Requires:   python-oslo-rootwrap >= 2.0.0
 Requires:   python-oslo-serialization >= 1.4.0
 Requires:   python-oslo-utils >= 1.6.0
-Requires:   MySQL-python >= 0.6.2
 Requires:   python-barbicanclient >= 3.0.1
 Requires:   python-keystoneclient >= 1.6.0
 Requires:   python-novaclient >= 2.22.0
