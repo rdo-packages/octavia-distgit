@@ -335,6 +335,7 @@ exit 0
 %dir %attr(0755, %{service}, %{service}) %{_sharedstatedir}/%{service}
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
+%{_bindir}/haproxy-vrrp-check
 
 %files amphora-agent
 %license LICENSE
