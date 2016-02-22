@@ -1,15 +1,18 @@
+%global release_name liberty
 %global service octavia
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:       openstack-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.5.2
+Release:    1%{?milestone}%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
-Source0:    http://tarballs.openstack.org/%{service}/%{service}-master.tar.gz
+Source0:    http://tarballs.openstack.org/%{service}/%{service}-%{version}.tar.gz
 Source1:    %{service}.logrotate
 Source10:   octavia-amphora-agent.service
 Source11:   octavia-api.service
@@ -372,4 +375,5 @@ exit 0
 
 
 %changelog
-
+* Thu Feb 22 2016 Nir Magnezi <nmagnezi@redhat.com> 0.5.2-1.el7
+- Initial release of 0.5.2
