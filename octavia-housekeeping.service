@@ -3,7 +3,7 @@ Description=OpenStack Octavia Housekeeping service
 After=syslog.target network.target
 
 [Service]
-Type=notify
+Type=simple
 User=octavia
 ExecStart=/usr/bin/octavia-housekeeping --config-file /usr/share/octavia/octavia-dist.conf --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/common --config-dir /etc/octavia/conf.d/octavia-housekeeping --log-file /var/log/octavia/housekeeping.log
 PrivateTmp=true
