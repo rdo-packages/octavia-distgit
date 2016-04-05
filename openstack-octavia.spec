@@ -375,5 +375,5 @@ exit 0
 
 
 %changelog
-* Thu Feb 22 2016 Nir Magnezi <nmagnezi@redhat.com> 0.5.2-1.el7
+* Mon Feb 22 2016 Nir Magnezi <nmagnezi@redhat.com> 0.5.2-1.el7
 - Initial release of 0.5.2
