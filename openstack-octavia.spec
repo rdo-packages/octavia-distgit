@@ -336,6 +336,7 @@ exit 0
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
 %{_bindir}/haproxy-vrrp-check
+%{_bindir}/octavia-db-manage
 
 %files amphora-agent
 %license LICENSE
