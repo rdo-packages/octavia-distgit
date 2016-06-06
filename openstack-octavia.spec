@@ -83,7 +83,13 @@ Requires:   python-taskflow >= 0.11.0
 Requires:   python-networkx >= 1.8
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
-
+Requires:   python-cryptography >= 1.0
+Requires:   python-keystoneauth1 >= 2.1.0
+Requires:   python-oslo-reports >= 0.6.0
+Requires:   python-oslo-service >= 1.10.0
+Requires:   python-pymysql >= 0.6.2
+Requires:   python-pyopenssl >= 0.14
+Requires:   python-glanceclient >= 2.0.0
 
 %description -n python-%{service}
 %{common_desc}
