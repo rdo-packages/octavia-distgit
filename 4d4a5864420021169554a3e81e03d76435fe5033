@@ -16,6 +16,23 @@
       "revId": "4d4a5864420021169554a3e81e03d76435fe5033",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa57193c_5ad6b5c6",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-06-07T10:50:15Z",
+      "side": 1,
+      "message": "yeah, py2pi -\u003e RPM mapping used by rdopkg reqcheck is not correct, it\u0027s missing exception mappings for PyMySQL abd pyOpenSSL.\n\npymysql is covered indirectly via python-oslo-db",
+      "revId": "4d4a5864420021169554a3e81e03d76435fe5033",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
