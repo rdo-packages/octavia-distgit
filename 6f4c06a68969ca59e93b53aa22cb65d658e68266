@@ -22,6 +22,30 @@
       "revId": "6f4c06a68969ca59e93b53aa22cb65d658e68266",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa57193c_5aa4f556",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2016-06-07T12:36:34Z",
+      "side": 1,
+      "message": "I just noticed Alan\u0027s comment in patch-set#2.\ndisregard.",
+      "parentUuid": "fa57193c_1a9a7d14",
+      "range": {
+        "startLine": 86,
+        "startChar": 19,
+        "endLine": 86,
+        "endChar": 31
+      },
+      "revId": "6f4c06a68969ca59e93b53aa22cb65d658e68266",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
