@@ -16,6 +16,24 @@
       "revId": "1c1b06569d51c78042c84c315d3de27abd9f4901",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa57193c_da8f65cb",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-06-07T12:59:15Z",
+      "side": 1,
+      "message": "Oh yeah, we really need to teach reqcheck about Epoch!",
+      "parentUuid": "fa57193c_1af39d74",
+      "revId": "1c1b06569d51c78042c84c315d3de27abd9f4901",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
