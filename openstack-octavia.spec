@@ -332,7 +332,8 @@ exit 0
 %files common
 %license LICENSE
 %doc README.rst
-%dir %{_sysconfdir}/%{service}
+%dir %{_sysconfdir}/%{service}/conf.d
+%dir %{_sysconfdir}/%{service}/conf.d/common
 %attr(-, root, %{service}) %{_datadir}/%{service}/%{service}-dist.conf
 %config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/%{service}.conf
 %config(noreplace) %{_sysconfdir}/logrotate.d/*
