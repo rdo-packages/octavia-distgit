@@ -88,6 +88,7 @@ Requires:   python-keystoneauth1 >= 2.1.0
 Requires:   python-oslo-reports >= 0.6.0
 Requires:   python-oslo-service >= 1.10.0
 Requires:   python-glanceclient >= 1:2.0.0
+Requires:   python-rfc3986
 
 %description -n python-%{service}
 %{common_desc}
