@@ -189,6 +189,23 @@ Requires:   openstack-%{service}-common = %{version}-%{release}
 This package contains OpenStack Octavia Housekeeping service.
 
 
+%package diskimage-create
+Summary:    OpenStack Octavia Amphora diskimage-builder script
+Group:      Applications/System
+
+Requires:   openstack-%{service}-common = %{version}-%{release}
+Requires:   dib-utils
+Requires:   diskimage-builder >= 1.18.0
+Requires:   openstack-tripleo-image-elements
+
+
+%description diskimage-create
+%{common_desc}
+
+This package contains a diskimage-builder script for creating Octavia Amphora images
+
+
+
 %prep
 %setup -q -n %{service}-%{upstream_version}
 
@@ -249,6 +266,10 @@ mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/common
 for service in amphora-agent api health-manager housekeeping worker; do
     mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/%{service}-$service
 done
+
+# Install diskimage-create files
+cp -vr elements/ %{buildroot}%{_datadir}/%{service}-elements
+install -m 755 diskimage-create/diskimage-create.sh %{buildroot}%{_bindir}/%{service}-diskimage-create.sh
 
 %pre common
 getent group %{service} >/dev/null || groupadd -r %{service}
@@ -377,6 +398,11 @@ exit 0
 %{_bindir}/octavia-housekeeping
 %{_unitdir}/octavia-housekeeping.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-housekeeping
+
+%files diskimage-create
+%doc diskimage-create/README.rst
+%{_bindir}/%{service}-diskimage-create.sh
+%{_datadir}/%{service}-elements
 
 
 %changelog
