@@ -10,7 +10,7 @@ Summary:    Octavia, a load balancer implementation for OpenStack
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
-Source0:    http://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
 Source1:    %{service}.logrotate
 Source10:   octavia-amphora-agent.service
 Source11:   octavia-api.service
