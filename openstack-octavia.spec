@@ -44,52 +44,54 @@ Requires(postun): systemd
 Summary:    Octavia Python libraries
 Group:      Applications/System
 
-Requires:   python-alembic >= 0.7.2
-Requires:   python-pecan >= 0.8.0
-Requires:   python-pbr >= 0.11
-Requires:   python-sqlalchemy >= 0.9.7
+Requires:   python-alembic >= 0.8.4
+Requires:   python-pecan >= 1.0.0
+Requires:   python-pbr >= 1.6
+Requires:   python-sqlalchemy >= 1.0.10
 Requires:   python-anyjson >= 0.3.3
-Requires:   python-babel >= 1.3
-Requires:   python-eventlet >= 0.17.3
-Requires:   python-requests >= 2.5.2
+Requires:   python-babel >= 2.3.4
+Requires:   python-eventlet >= 0.18.2
+Requires:   python-requests >= 2.10.0
 Requires:   python-iso8601 >= 0.1.9
 Requires:   python-jsonrpclib
-Requires:   python-keystonemiddleware >= 1.5.0
+Requires:   python-keystonemiddleware >= 4.2.0
 Requires:   python-netaddr >= 0.7.12
-Requires:   python-neutronclient >= 2.3.11
+Requires:   python-neutronclient >= 5.1.0
 Requires:   python-webob >= 1.2.3
 Requires:   python-six >= 1.9.0
-Requires:   python-stevedore >= 1.5.0
-Requires:   python-oslo-config >= 1.11.0
-Requires:   python-oslo-context >= 0.2.0
-Requires:   python-oslo-db >= 1.10.0
-Requires:   python-oslo-i18n >= 1.5.0
-Requires:   python-oslo-log >= 1.2.0
-Requires:   python-oslo-messaging >= 1.8.0
-Requires:   python-oslo-middleware >= 1.2.0
+Requires:   python-stevedore >= 1.16.0
+Requires:   python-oslo-config >= 3.14.0
+Requires:   python-oslo-context >= 2.9.0
+Requires:   python-oslo-db >= 4.10.0
+Requires:   python-oslo-i18n >= 2.1.0
+Requires:   python-oslo-log >= 3.11.0
+Requires:   python-oslo-messaging >= 5.2.0
+Requires:   python-oslo-middleware >= 3.0.0
 Requires:   python-oslo-rootwrap >= 2.0.0
 Requires:   python-oslo-serialization >= 1.4.0
-Requires:   python-oslo-utils >= 1.6.0
-Requires:   python-barbicanclient >= 3.0.1
+Requires:   python-oslo-utils >= 3.16.0
+Requires:   python-barbicanclient >= 4.0.0
 Requires:   python-keystoneclient >= 1.6.0
-Requires:   python-novaclient >= 2.22.0
+Requires:   python-novaclient >= 2.29.0
 Requires:   python-posix_ipc
-Requires:   pyOpenSSL >= 0.11
+Requires:   pyOpenSSL >= 0.14
 Requires:   python-wsme
 Requires:   python-pyasn1
 Requires:   python-pyasn1-modules
-Requires:   python-jinja2 >= 2.6
+Requires:   python-jinja2 >= 2.7.2
 Requires:   python-paramiko >= 1.13.0
-Requires:   python-taskflow >= 0.11.0
+Requires:   python-taskflow >= 1.26.0
 Requires:   python-networkx >= 1.8
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
 Requires:   python-cryptography >= 1.0
-Requires:   python-keystoneauth1 >= 2.1.0
+Requires:   python-keystoneauth1 >= 2.10.0
 Requires:   python-oslo-reports >= 0.6.0
 Requires:   python-oslo-service >= 1.10.0
-Requires:   python-glanceclient >= 1:2.0.0
+Requires:   python-glanceclient >= 1:2.5.0
 Requires:   python-rfc3986
+Requires:   python-pyroute2 >= 0.4.3
+Requires:   python-ipaddress >= 1.0.7
 
 %description -n python-%{service}
 %{common_desc}
