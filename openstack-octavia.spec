@@ -199,7 +199,6 @@ Group:      Applications/System
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   dib-utils
 Requires:   diskimage-builder >= 1.18.0
-Requires:   openstack-tripleo-image-elements
 
 
 %description diskimage-create
