@@ -273,6 +273,10 @@ done
 # Install diskimage-create files
 cp -vr elements/ %{buildroot}%{_datadir}/%{service}-image-elements
 install -m 755 diskimage-create/diskimage-create.sh %{buildroot}%{_bindir}/%{service}-diskimage-create.sh
+# Remove setuptools installed diskimage-create files
+rm -rf %{buildroot}%{_datadir}/%{service}/diskimage-create
+rm -rf %{buildroot}%{_datadir}/%{service}/LICENSE
+rm -rf %{buildroot}%{_datadir}/%{service}/README.rst
 
 %pre common
 getent group %{service} >/dev/null || groupadd -r %{service}
