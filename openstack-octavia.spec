@@ -410,3 +410,4 @@ exit 0
 
 %changelog
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=7ba3434215165e0eea840606714fef74a51a66f6
