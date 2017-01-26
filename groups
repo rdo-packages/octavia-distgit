@@ -1,6 +1,6 @@
 # UUID                                  	Group Name
 #
 282c9e8c3bc94a1800ba86fefc25094f0b101947	openstack/octavia-distgit-ptl
-9491af7a5c13de92a536d5fe9fce8aaa56782919	openstack/octavia-distgit-core
 63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
+9491af7a5c13de92a536d5fe9fce8aaa56782919	openstack/octavia-distgit-core
 global:Registered-Users                 	Registered Users
