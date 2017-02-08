@@ -236,6 +236,10 @@ done < %{SOURCE30}
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
+
+# Create fake egg-info for the tempest plugin
+%py2_entrypoint %{service} %{service}
+
 # Remove unused files
 rm -rf %{buildroot}%{python2_sitelib}/bin
 rm -rf %{buildroot}%{python2_sitelib}/doc
@@ -347,10 +351,11 @@ exit 0
 %systemd_postun_with_restart octavia-housekeeping.service
 
 
+# Create a tempest plugin fake egg-info file
 %files -n python-%{service}-tests
 %license LICENSE
 %{python2_sitelib}/%{service}/tests
-
+%{python2_sitelib}/%{service}_tests.egg-info
 
 %files -n python-%{service}
 %license LICENSE
