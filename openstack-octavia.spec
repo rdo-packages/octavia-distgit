@@ -27,6 +27,7 @@ BuildRequires:  python-d2to1
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
+BuildRequires:  openstack-macros
 
 Requires:   python-%{service} = %{version}-%{release}
 
