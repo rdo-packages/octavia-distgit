@@ -8,6 +8,7 @@ User=octavia
 ExecStart=/usr/bin/octavia-worker --config-file /usr/share/octavia/octavia-dist.conf --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/common --config-dir /etc/octavia/conf.d/octavia-worker --log-file /var/log/octavia/worker.log
 PrivateTmp=true
 KillMode=process
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

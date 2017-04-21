@@ -7,6 +7,7 @@ Type=simple
 User=octavia
 ExecStart=/usr/bin/amphora-agent --config-file /usr/share/octavia/octavia-dist.conf --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/octavia-amphora-agent --log-file /var/log/octavia/amphora-agent.log
 KillMode=process
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

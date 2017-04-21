@@ -9,6 +9,7 @@ ExecStart=/usr/bin/octavia-api --config-file /usr/share/octavia/octavia-dist.con
 PrivateTmp=true
 NotifyAccess=all
 KillMode=process
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
