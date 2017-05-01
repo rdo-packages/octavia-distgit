@@ -389,6 +389,7 @@ exit 0
 %files api
 %license LICENSE
 %{_bindir}/octavia-api
+%{_bindir}/octavia-wsgi
 %{_unitdir}/octavia-api.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-api
 
@@ -421,3 +422,4 @@ exit 0
 
 %changelog
 
+# REMOVEME: error caused by commit https://github.com/openstack/octavia/commit/a669d7e4f18b5b7d089af0c7137abc30d73e5de3
