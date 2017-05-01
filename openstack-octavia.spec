@@ -389,6 +389,7 @@ exit 0
 %files api
 %license LICENSE
 %{_bindir}/octavia-api
+%{_bindir}/octavia-wsgi
 %{_unitdir}/octavia-api.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-api
 
