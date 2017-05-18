@@ -107,6 +107,7 @@ Summary:    Octavia tests
 Group:      Applications/System
 
 Requires:   python-%{service} = %{version}-%{release}
+Requires:   golang
 
 
 %description -n python-%{service}-tests
