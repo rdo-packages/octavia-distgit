@@ -29,6 +29,44 @@ BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
 BuildRequires:  openstack-macros
 
+# BuildRequires for test subpackage
+BuildRequires:  python-requests-mock
+BuildRequires:  python-coverage
+BuildRequires:  python-mock
+BuildRequires:  python-subunit
+BuildRequires:  python-oslotest
+BuildRequires:  python-testrepository
+BuildRequires:  python-testtools
+BuildRequires:  python-testresources
+BuildRequires:  python-testscenarios
+BuildRequires:  python-webtest
+BuildRequires:  python-oslo-utils
+BuildRequires:  python-flask
+BuildRequires:  python-oslo-config
+BuildRequires:  python-netifaces
+BuildRequires:  python-oslo-log
+BuildRequires:  python-glanceclient
+BuildRequires:  python-wsme
+BuildRequires:  python-barbicanclient
+BuildRequires:  python-cryptography
+BuildRequires:  python-gunicorn
+BuildRequires:  python-keystoneauth1
+BuildRequires:  python-futures
+BuildRequires:  python-netaddr
+BuildRequires:  python-novaclient
+BuildRequires:  python-taskflow
+BuildRequires:  python-neutronclient
+BuildRequires:  python-oslo-db
+BuildRequires:  python-oslo-reports
+BuildRequires:  python-oslo-policy
+BuildRequires:  python-pecan
+BuildRequires:  python-pyroute2
+BuildRequires:  python-pyasn1
+BuildRequires:  python-oslo-messaging
+BuildRequires:  python-pyasn1-modules
+BuildRequires:  python-cotyledon
+BuildRequires:  python-keystonemiddleware
+
 Requires:   python-%{service} = %{version}-%{release}
 
 Requires(pre): shadow-utils
@@ -101,19 +139,40 @@ Requires:   python-gunicorn
 
 This package contains the Octavia Python library.
 
-
 %package -n python-%{service}-tests
 Summary:    Octavia tests
 Group:      Applications/System
 
 Requires:   python-%{service} = %{version}-%{release}
+Requires:   python-%{service}-tests-golang = %{version}-%{release}
 
+Requires:   python-requests-mock
+Requires:   python-coverage
+Requires:   python-mock
+Requires:   python-subunit
+Requires:   python-oslotest
+Requires:   python-testrepository
+Requires:   python-testtools
+Requires:   python-testresources
+Requires:   python-testscenarios
+Requires:   python-webtest
+Requires:   python-tempest
+Requires:   python-futures
 
 %description -n python-%{service}-tests
 %{common_desc}
 
 This package contains Octavia test files.
 
+%package -n python-%{service}-tests-golang
+Summary:    Octavia tests golang
+
+Requires:   golang
+
+%description -n python-%{service}-tests-golang
+%{common_desc}
+
+This package contains Octavia tempest golang httpd code.
 
 %package common
 Summary:    Octavia common files
@@ -234,6 +293,8 @@ while read name eq value; do
   sed -ri "0,/^(#)? *$name *=/{s!^(#)? *$name *=.*!# $name = $value!}" etc/%{service}.conf
 done < %{SOURCE30}
 
+# Building golang binaries
+
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
@@ -291,6 +352,11 @@ getent passwd %{service} >/dev/null || \
     -c "OpenStack Octavia Daemons" %{service}
 exit 0
 
+%check
+export OS_TEST_PATH='./octavia/tests/functional'
+export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
+export PYTHONPATH=$PWD
+%{__python2} setup.py testr
 
 %post amphora-agent
 %systemd_post octavia-amphora-agent.service
@@ -351,12 +417,15 @@ exit 0
 %postun housekeeping
 %systemd_postun_with_restart octavia-housekeeping.service
 
-
 # Create a tempest plugin fake egg-info file
 %files -n python-%{service}-tests
 %license LICENSE
 %{python2_sitelib}/%{service}/tests
 %{python2_sitelib}/%{service}_tests.egg-info
+%exclude %{python2_sitelib}/%{service}/tests/contrib/httpd.go
+
+%files -n python-%{service}-tests-golang
+%{python2_sitelib}/%{service}/tests/contrib/httpd.go
 
 %files -n python-%{service}
 %license LICENSE
