@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa201ad_5c74139c",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-24T22:18:10Z",
+      "side": 1,
+      "message": "actual building is missing?",
+      "revId": "d60f7ff33c4fc9471a8ddb25e20455c86c7eb9d4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_7c79d792",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-24T22:18:10Z",
+      "side": 1,
+      "message": "is that upstream or buildroot env issue?\nThere should be upstream LP bug or RDO bz filed for either case.",
+      "revId": "d60f7ff33c4fc9471a8ddb25e20455c86c7eb9d4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_9c6e7bc8",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-24T22:18:10Z",
+      "side": 1,
+      "message": "why is that?",
+      "revId": "d60f7ff33c4fc9471a8ddb25e20455c86c7eb9d4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_bc733fb0",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-24T22:18:10Z",
+      "side": 1,
+      "message": "so point was to not include source but compiled binary and patch tests to use it, to avoid running compiler at runtime",
+      "revId": "d60f7ff33c4fc9471a8ddb25e20455c86c7eb9d4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
