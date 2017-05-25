@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "baa201ad_dcdac3e8",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-05-25T16:14:00Z",
+      "side": 1,
+      "message": "yes correct",
+      "parentUuid": "baa201ad_9c5afb81",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa201ad_fc506760",
         "filename": "openstack-octavia.spec",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2017-05-25T16:02:50Z",
       "side": 1,
       "message": "@lon just told me go statically compiled binaries still need golang at runtime.",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_fcd787bd",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-05-25T16:14:00Z",
+      "side": 1,
+      "message": "Will i replace it with this BuildRequires:  %{?go_compiler:compiler(go-compiler)}%{!?go_compiler:golang}",
+      "parentUuid": "baa201ad_fc506760",
       "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "baa201ad_5ceed38c",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-05-25T16:14:00Z",
+      "side": 1,
+      "message": "will do that.",
+      "parentUuid": "baa201ad_1c4e0bc2",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa201ad_5cc7b312",
         "filename": "openstack-octavia.spec",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2017-05-25T16:02:50Z",
       "side": 1,
       "message": "This might fail silently, better to maintain explicit patch in rpm-master-patches",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_1ce52ba8",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-05-25T16:14:00Z",
+      "side": 1,
+      "message": "I am thinking for a better fix to first check for binary in particular directory if not found, run go build and move the binary to that directory, But it requires convincing upstream.\nAdding a FIXME here to fix it later.",
+      "parentUuid": "baa201ad_5cc7b312",
       "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
