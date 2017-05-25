@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa201ad_9c5afb81",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-25T16:02:50Z",
+      "side": 1,
+      "message": "This line confused me, those are actually test deps for running functional tests in %check, right?",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_fc506760",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-25T16:02:50Z",
+      "side": 1,
+      "message": "@lon just told me go statically compiled binaries still need golang at runtime.",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_1c4e0bc2",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-25T16:02:50Z",
+      "side": 1,
+      "message": "That is a wrong place for a Go binary, not sure what fedora Go packing guidelines say, but I\u0027d put it as e.g. bindir/octavia-tests-httpd",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa201ad_5cc7b312",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-25T16:02:50Z",
+      "side": 1,
+      "message": "This might fail silently, better to maintain explicit patch in rpm-master-patches",
+      "revId": "53af77e5004fe384c499fef6a74e83ffe8171d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
