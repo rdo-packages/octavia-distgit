@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_8f01f53b",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-26T12:00:20Z",
+      "side": 1,
+      "message": "octavia/tests/contrib/octavia-tests-httpd",
+      "range": {
+        "startLine": 308,
+        "startChar": 19,
+        "endLine": 308,
+        "endChar": 38
+      },
+      "revId": "6d959f9665c440f7c37d7d0c5beb875ca192f7c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
