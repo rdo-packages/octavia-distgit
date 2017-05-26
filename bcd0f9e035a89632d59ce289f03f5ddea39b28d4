@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_b20ffe2d",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-26T16:25:13Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "bcd0f9e035a89632d59ce289f03f5ddea39b28d4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
