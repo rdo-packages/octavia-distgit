@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_923e7a28",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-05-29T11:18:41Z",
+      "side": 1,
+      "message": "@Lon in my testing, octavia-tests-httpd worked w/o any golang installed at runtime.",
+      "revId": "cf7fcfac7d9b0f1947f21a601d444e413a5e0ef8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
