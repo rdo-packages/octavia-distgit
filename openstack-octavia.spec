@@ -133,6 +133,7 @@ Requires:   python-rfc3986
 Requires:   python-pyroute2 >= 0.4.3
 Requires:   python-ipaddress >= 1.0.7
 Requires:   python-gunicorn
+Requires:   python-cotyledon >= 1.3.0
 
 %description -n python-%{service}
 %{common_desc}
