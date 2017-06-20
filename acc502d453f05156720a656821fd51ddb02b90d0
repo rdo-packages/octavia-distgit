@@ -16,6 +16,24 @@
       "revId": "acc502d453f05156720a656821fd51ddb02b90d0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_642b06ec",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-06-20T07:25:32Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "9aa7fdbe_041dda0f",
+      "revId": "acc502d453f05156720a656821fd51ddb02b90d0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
