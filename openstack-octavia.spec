@@ -132,7 +132,7 @@ Requires:   python-glanceclient >= 1:2.5.0
 Requires:   python-rfc3986
 Requires:   python-pyroute2 >= 0.4.3
 Requires:   python-ipaddress >= 1.0.7
-Requires:   python-gunicorn
+Requires:   python-gunicorn >= 19.0
 Requires:   python-cotyledon >= 1.3.0
 
 %description -n python-%{service}
