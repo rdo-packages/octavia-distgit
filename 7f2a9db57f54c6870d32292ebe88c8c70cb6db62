@@ -1,0 +1,9 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+1: Bernard Cafarelli <bcafarel@redhat.com>
+Workflow+1: nmagnezi <nmagnezi@redhat.com>
+Verified+2: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-by: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-at: Tue, 20 Jun 2017 09:47:43 +0000
+Reviewed-on: https://review.rdoproject.org/r/6985
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
