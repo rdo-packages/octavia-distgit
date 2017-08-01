@@ -520,3 +520,4 @@ export PYTHONPATH=$PWD
 
 %changelog
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=c17f59ffc15ec14ac32811c30e69b36ea9f6e18d
