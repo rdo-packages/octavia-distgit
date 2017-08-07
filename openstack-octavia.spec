@@ -37,7 +37,6 @@ BuildRequires:  python-testrepository
 BuildRequires:  python-testtools
 BuildRequires:  python-testresources
 BuildRequires:  python-testscenarios
-BuildRequires:  python-webtest
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-flask
 BuildRequires:  python-oslo-config
@@ -158,7 +157,6 @@ Requires:   python-testrepository
 Requires:   python-testtools
 Requires:   python-testresources
 Requires:   python-testscenarios
-Requires:   python-webtest
 Requires:   python-tempest
 Requires:   python-futures
 
