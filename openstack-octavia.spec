@@ -383,7 +383,6 @@ exit 0
 %check
 export OS_TEST_PATH='./octavia/tests/functional'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
-export PYTHONPATH=$PWD
 %{__python2} setup.py testr
 
 %post amphora-agent
