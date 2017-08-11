@@ -29,7 +29,6 @@ BuildRequires:  openstack-macros
 
 # BuildRequires for running functional tests
 BuildRequires:  python-requests-mock
-BuildRequires:  python-coverage
 BuildRequires:  python-mock
 BuildRequires:  python-subunit
 BuildRequires:  python-oslotest
@@ -149,7 +148,6 @@ Requires:   python-%{service} = %{version}-%{release}
 Requires:   python-%{service}-tests-golang = %{version}-%{release}
 
 Requires:   python-requests-mock
-Requires:   python-coverage
 Requires:   python-mock
 Requires:   python-subunit
 Requires:   python-oslotest
