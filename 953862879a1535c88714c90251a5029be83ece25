@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_c10e6434",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-08-14T08:40:51Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be 0.8.10? \n\nhttps://github.com/openstack/octavia/blob/690ccfd43fb141c26652e119f1d702b65414a194/requirements.txt#L4",
+      "range": {
+        "startLine": 83,
+        "startChar": 12,
+        "endLine": 83,
+        "endChar": 35
+      },
+      "revId": "953862879a1535c88714c90251a5029be83ece25",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
