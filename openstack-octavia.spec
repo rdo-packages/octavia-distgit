@@ -81,52 +81,46 @@ Group:      Applications/System
 
 BuildArch:  noarch
 
-Requires:   python-alembic >= 0.8.4
+Requires:   python-alembic >= 0.8.7
 Requires:   python-pecan >= 1.0.0
-Requires:   python-pbr >= 1.8
+Requires:   python-pbr >= 2.0.0
 Requires:   python-sqlalchemy >= 1.0.10
 Requires:   python-anyjson >= 0.3.3
 Requires:   python-babel >= 2.3.4
-Requires:   python-eventlet >= 0.18.2
 Requires:   python-requests >= 2.10.0
 Requires:   python-iso8601 >= 0.1.9
 Requires:   python-jsonrpclib
 Requires:   python-keystonemiddleware >= 4.12.0
 Requires:   python-netaddr >= 0.7.12
-Requires:   python-neutronclient >= 5.1.0
-Requires:   python-webob >= 1.6.0
+Requires:   python-neutronclient >= 6.3.0
+Requires:   python-webob >= 1.7.1
 Requires:   python-six >= 1.9.0
-Requires:   python-stevedore >= 1.17.1
-Requires:   python-oslo-config >= 2:3.14.0
-Requires:   python-oslo-context >= 2.9.0
-Requires:   python-oslo-db >= 4.15.0
+Requires:   python-stevedore >= 1.20.0
+Requires:   python-oslo-config >= 2:4.0.0
+Requires:   python-oslo-context >= 2.14.0
+Requires:   python-oslo-db >= 4.24.0
 Requires:   python-oslo-i18n >= 2.1.0
-Requires:   python-oslo-log >= 3.11.0
-Requires:   python-oslo-messaging >= 5.14.0
-Requires:   python-oslo-middleware >= 3.0.0
-Requires:   python-oslo-policy >= 1.17.0
-Requires:   python-oslo-rootwrap >= 2.0.0
-Requires:   python-oslo-serialization >= 1.4.0
-Requires:   python-oslo-utils >= 3.18.0
+Requires:   python-oslo-serialization >= 1.10.0
+Requires:   python-oslo-log >= 3.22.0
+Requires:   python-oslo-messaging >= 5.24.2
+Requires:   python-oslo-middleware >= 3.27.0
+Requires:   python-oslo-policy >= 1.23.0
+Requires:   python-oslo-utils >= 3.20.0
 Requires:   python-barbicanclient >= 4.0.0
-Requires:   python-keystoneclient >= 1:1.6.0
-Requires:   python-novaclient >= 1:6.0.0
-Requires:   python-posix_ipc
+Requires:   python-novaclient >= 1:9.0.0
 Requires:   pyOpenSSL >= 0.14
 Requires:   python-wsme
 Requires:   python-pyasn1
 Requires:   python-pyasn1-modules
 Requires:   python-jinja2 >= 2.7.2
-Requires:   python-paramiko >= 1.13.0
 Requires:   python-taskflow >= 2.7.0
 Requires:   python-networkx >= 1.8
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
-Requires:   python-cryptography >= 1.0
-Requires:   python-keystoneauth1 >= 2.18.0
+Requires:   python-cryptography >= 1.6
+Requires:   python-keystoneauth1 >= 3.1.0
 Requires:   python-oslo-reports >= 0.6.0
-Requires:   python-oslo-service >= 1.10.0
-Requires:   python-glanceclient >= 1:2.5.0
+Requires:   python-glanceclient >= 1:2.8.0
 Requires:   python-rfc3986
 Requires:   python-pyroute2 >= 0.4.3
 Requires:   python-ipaddress >= 1.0.7
