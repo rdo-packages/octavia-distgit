@@ -1,16 +1,21 @@
+%global milestone .0rc2
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global service octavia
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-Version:    XXX
-Release:    XXX
+Version:    1.0.0
+Release:    0.1%{?milestone}%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
+#
+# patches_base=1.0.0.0rc2
+#
+
 Source1:    %{service}.logrotate
 Source10:   octavia-amphora-agent.service
 Source11:   octavia-api.service
@@ -504,4 +509,7 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 
 
 %changelog
+* Tue Aug 22 2017 Alfredo Moralejo <amoralej@redhat.com> 1.0.0-0.1.0rc2
+- Update to 1.0.0.0rc2
+
 
