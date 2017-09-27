@@ -12,11 +12,11 @@ URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
 Source1:    %{service}.logrotate
-Source10:   octavia-amphora-agent.service
-Source11:   octavia-api.service
-Source12:   octavia-worker.service
-Source13:   octavia-health-manager.service
-Source14:   octavia-housekeeping.service
+Source10:   %{service}-amphora-agent.service
+Source11:   %{service}-api.service
+Source12:   %{service}-worker.service
+Source13:   %{service}-health-manager.service
+Source14:   %{service}-housekeeping.service
 
 Source30:   %{service}-dist.conf
 
@@ -283,8 +283,8 @@ export SKIP_PIP_INSTALL=1
 %{__python2} setup.py build
 
 # Generate octavia-tests-httpd binary from httpd.go
-pushd octavia/tests/contrib
- go build -ldflags '-linkmode external -extldflags -static' -o octavia-tests-httpd httpd.go
+pushd %{service}/tests/contrib
+ go build -ldflags '-linkmode external -extldflags -static' -o %{service}-tests-httpd httpd.go
 popd
 
 # Loop through values in octavia-dist.conf and make sure that the values
@@ -301,16 +301,16 @@ done < %{SOURCE30}
 
 # Move httpd binary to proper place
 install -d -p %{buildroot}%{_bindir}
-install -p -m 0755 octavia/tests/contrib/octavia-tests-httpd %{buildroot}%{_bindir}
+install -p -m 0755 %{service}/tests/contrib/%{service}-tests-httpd %{buildroot}%{_bindir}
 
 # Replace the path with its binary
-PATH1=%{buildroot}%{python2_sitelib}/octavia/tests/tempest/v1/scenario/base.py
-PATH2=%{buildroot}%{python2_sitelib}/octavia/tests/tempest/v2/scenario/base.py
-sed -i "s#self._build_static_httpd()#'/usr/bin/octavia-tests-httpd'#g" $PATH1
-sed -i "s#self._build_static_httpd()#'/usr/bin/octavia-tests-httpd'#g" $PATH2
+PATH1=%{buildroot}%{python2_sitelib}/%{service}/tests/tempest/v1/scenario/base.py
+PATH2=%{buildroot}%{python2_sitelib}/%{service}/tests/tempest/v2/scenario/base.py
+sed -i "s#self._build_static_httpd()#'/usr/bin/%{service}-tests-httpd'#g" $PATH1
+sed -i "s#self._build_static_httpd()#'/usr/bin/%{service}-tests-httpd'#g" $PATH2
 
 # Remove httpd.go code
-rm  %{buildroot}%{python2_sitelib}/octavia/tests/contrib/httpd.go
+rm  %{buildroot}%{python2_sitelib}/%{service}/tests/contrib/httpd.go
 
 # Create fake egg-info for the tempest plugin
 %py2_entrypoint %{service} %{service}
@@ -328,11 +328,11 @@ mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
 
 # Install systemd units
-install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/octavia-amphora-agent.service
-install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/octavia-api.service
-install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/octavia-worker.service
-install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/octavia-health-manager.service
-install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/octavia-housekeeping.service
+install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{service}-amphora-agent.service
+install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{service}-api.service
+install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{service}-worker.service
+install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{service}-health-manager.service
+install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{service}-housekeeping.service
 
 # Setup directories
 install -d -m 755 %{buildroot}%{_datadir}/%{service}
@@ -366,68 +366,68 @@ getent passwd %{service} >/dev/null || \
 exit 0
 
 %check
-export OS_TEST_PATH='./octavia/tests/functional'
+export OS_TEST_PATH='./%{service}/tests/functional'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 %{__python2} setup.py testr
 
 %post amphora-agent
-%systemd_post octavia-amphora-agent.service
+%systemd_post %{service}-amphora-agent.service
 
 
 %preun amphora-agent
-%systemd_preun octavia-amphora-agent.service
+%systemd_preun %{service}-amphora-agent.service
 
 
 %postun amphora-agent
-%systemd_postun_with_restart octavia-amphora-agent.service
+%systemd_postun_with_restart %{service}-amphora-agent.service
 
 
 %post api
-%systemd_post octavia-api.service
+%systemd_post %{service}-api.service
 
 
 %preun api
-%systemd_preun octavia-api.service
+%systemd_preun %{service}-api.service
 
 
 %postun api
-%systemd_postun_with_restart octavia-api.service
+%systemd_postun_with_restart %{service}-api.service
 
 
 %post worker
-%systemd_post octavia-worker.service
+%systemd_post %{service}-worker.service
 
 
 %preun worker
-%systemd_preun octavia-worker.service
+%systemd_preun %{service}-worker.service
 
 
 %postun worker
-%systemd_postun_with_restart octavia-worker.service
+%systemd_postun_with_restart %{service}-worker.service
 
 
 %post health-manager
-%systemd_post octavia-health-manager.service
+%systemd_post %{service}-health-manager.service
 
 
 %preun health-manager
-%systemd_preun octavia-health-manager.service
+%systemd_preun %{service}-health-manager.service
 
 
 %postun health-manager
-%systemd_postun_with_restart octavia-health-manager.service
+%systemd_postun_with_restart %{service}-health-manager.service
 
 
 %post housekeeping
-%systemd_post octavia-housekeeping.service
+%systemd_post %{service}-housekeeping.service
 
 
 %preun housekeeping
-%systemd_preun octavia-housekeeping.service
+%systemd_preun %{service}-housekeeping.service
 
 
 %postun housekeeping
-%systemd_postun_with_restart octavia-housekeeping.service
+%systemd_postun_with_restart %{service}-housekeeping.service
 
 # Create a tempest plugin fake egg-info file
 %files -n python-%{service}-tests
@@ -436,7 +436,7 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 %{python2_sitelib}/%{service}_tests.egg-info
 
 %files -n python-%{service}-tests-golang
-%{_bindir}/octavia-tests-httpd
+%{_bindir}/%{service}-tests-httpd
 
 %files -n python-%{service}
 %license LICENSE
@@ -457,41 +457,41 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
 %{_bindir}/haproxy-vrrp-check
-%{_bindir}/octavia-db-manage
+%{_bindir}/%{service}-db-manage
 
 %files amphora-agent
 %license LICENSE
 %{_bindir}/amphora-agent
-%{_unitdir}/octavia-amphora-agent.service
+%{_unitdir}/%{service}-amphora-agent.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
 
 
 %files api
 %license LICENSE
-%{_bindir}/octavia-api
-%{_bindir}/octavia-wsgi
-%{_unitdir}/octavia-api.service
+%{_bindir}/%{service}-api
+%{_bindir}/%{service}-wsgi
+%{_unitdir}/%{service}-api.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-api
 
 
 %files worker
 %license LICENSE
-%{_bindir}/octavia-worker
-%{_unitdir}/octavia-worker.service
+%{_bindir}/%{service}-worker
+%{_unitdir}/%{service}-worker.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-worker
 
 
 %files health-manager
 %license LICENSE
-%{_bindir}/octavia-health-manager
-%{_unitdir}/octavia-health-manager.service
+%{_bindir}/%{service}-health-manager
+%{_unitdir}/%{service}-health-manager.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-health-manager
 
 
 %files housekeeping
 %license LICENSE
-%{_bindir}/octavia-housekeeping
-%{_unitdir}/octavia-housekeeping.service
+%{_bindir}/%{service}-housekeeping
+%{_unitdir}/%{service}-housekeeping.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-housekeeping
 
 %files diskimage-create
