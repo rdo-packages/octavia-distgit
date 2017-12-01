@@ -8,6 +8,8 @@ User=root
 ExecStart=/usr/bin/amphora-agent --config-file /etc/octavia/amphora-agent.conf
 KillMode=process
 Restart=on-failure
+ExecStartPost=/bin/sh -c "echo $MAINPID > /run/octavia-amphora-agent.pid"
+PIDFile=/run/octavia-amphora-agent.pid
 
 [Install]
 WantedBy=multi-user.target
