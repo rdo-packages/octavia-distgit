@@ -12,6 +12,7 @@ URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
 Source1:    %{service}.logrotate
+Source2:    %{service}-amphora-agent.logrotate
 Source10:   %{service}-amphora-agent.service
 Source11:   %{service}-api.service
 Source12:   %{service}-worker.service
@@ -326,6 +327,7 @@ mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
+install -p -D -m 644 elements/amphora-agent/static/etc/logrotate.d/amphora-agent %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
 
 # Install systemd units
 install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{service}-amphora-agent.service
@@ -452,7 +454,7 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 %dir %{_sysconfdir}/%{service}/conf.d/common
 %attr(-, root, %{service}) %{_datadir}/%{service}/%{service}-dist.conf
 %config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/%{service}.conf
-%config(noreplace) %{_sysconfdir}/logrotate.d/*
+%config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}
 %dir %attr(0755, %{service}, %{service}) %{_sharedstatedir}/%{service}
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
@@ -464,6 +466,7 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 %{_bindir}/amphora-agent
 %{_unitdir}/%{service}-amphora-agent.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
+%config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
 
 
 %files api
