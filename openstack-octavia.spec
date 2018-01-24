@@ -326,7 +326,7 @@ mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
-install -p -D -m 644 elements/amphora-agent/static/etc/logrotate.d/amphora-agent %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
+install -p -D -m 644 elements/amphora-agent/install.d/amphora-agent-source-install/amphora-agent.logrotate %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
 
 # Install systemd units
 install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{service}-amphora-agent.service
