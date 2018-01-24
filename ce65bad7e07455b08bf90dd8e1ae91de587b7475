@@ -16,6 +16,24 @@
       "revId": "ce65bad7e07455b08bf90dd8e1ae91de587b7475",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da9b358b_5649b2cf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 197
+      },
+      "writtenOn": "2018-01-24T11:18:29Z",
+      "side": 1,
+      "message": "Nice, I did not know that! Noted for next times",
+      "parentUuid": "da9b358b_f62fa6f4",
+      "revId": "ce65bad7e07455b08bf90dd8e1ae91de587b7475",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
