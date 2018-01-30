@@ -24,7 +24,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-d2to1
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
-BuildRequires:  systemd-units
+BuildRequires:  systemd
 BuildRequires:  openstack-macros
 
 # BuildRequires for running functional tests
