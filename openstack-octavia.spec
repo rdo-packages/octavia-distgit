@@ -22,46 +22,46 @@ Source30:   %{service}-dist.conf
 
 BuildRequires:  python2-devel
 BuildRequires:  python-d2to1
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 BuildRequires:  systemd
 BuildRequires:  openstack-macros
 
 # BuildRequires for running functional tests
 BuildRequires:  python-requests-mock
-BuildRequires:  python-mock
-BuildRequires:  python-subunit
-BuildRequires:  python-oslotest
-BuildRequires:  python-testrepository
-BuildRequires:  python-testtools
-BuildRequires:  python-testresources
-BuildRequires:  python-testscenarios
-BuildRequires:  python-oslo-utils
+BuildRequires:  python2-mock
+BuildRequires:  python2-subunit
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testtools
+BuildRequires:  python2-testresources
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-oslo-utils
 BuildRequires:  python-flask
-BuildRequires:  python-oslo-config
+BuildRequires:  python2-oslo-config
 BuildRequires:  python-netifaces
-BuildRequires:  python-oslo-log
-BuildRequires:  python-glanceclient
-BuildRequires:  python-wsme
-BuildRequires:  python-barbicanclient
-BuildRequires:  python-cryptography
-BuildRequires:  python-gunicorn
-BuildRequires:  python-keystoneauth1
+BuildRequires:  python2-oslo-log
+BuildRequires:  python2-glanceclient
+BuildRequires:  python2-wsme
+BuildRequires:  python2-barbicanclient
+BuildRequires:  python2-cryptography
+BuildRequires:  python2-gunicorn
+BuildRequires:  python2-keystoneauth1
 BuildRequires:  python-futures
-BuildRequires:  python-netaddr
-BuildRequires:  python-novaclient
-BuildRequires:  python-taskflow
-BuildRequires:  python-neutronclient
-BuildRequires:  python-oslo-db
-BuildRequires:  python-oslo-reports
-BuildRequires:  python-oslo-policy
-BuildRequires:  python-pecan
-BuildRequires:  python-pyroute2
-BuildRequires:  python-pyasn1
-BuildRequires:  python-oslo-messaging
-BuildRequires:  python-pyasn1-modules
-BuildRequires:  python-cotyledon
-BuildRequires:  python-keystonemiddleware
+BuildRequires:  python2-netaddr
+BuildRequires:  python2-novaclient
+BuildRequires:  python2-taskflow
+BuildRequires:  python2-neutronclient
+BuildRequires:  python2-oslo-db
+BuildRequires:  python2-oslo-reports
+BuildRequires:  python2-oslo-policy
+BuildRequires:  python2-pecan
+BuildRequires:  python2-pyroute2
+BuildRequires:  python2-pyasn1
+BuildRequires:  python2-oslo-messaging
+BuildRequires:  python2-pyasn1-modules
+BuildRequires:  python2-cotyledon
+BuildRequires:  python2-keystonemiddleware
 
 Requires:   python-%{service} = %{version}-%{release}
 
@@ -78,47 +78,47 @@ Group:      Applications/System
 
 BuildArch:  noarch
 
-Requires:   python-alembic >= 0.8.7
-Requires:   python-pecan >= 1.0.0
-Requires:   python-pbr >= 2.0.0
-Requires:   python-sqlalchemy >= 1.0.10
-Requires:   python-babel >= 2.3.4
-Requires:   python-requests >= 2.10.0
-Requires:   python-keystonemiddleware >= 4.12.0
-Requires:   python-netaddr >= 0.7.12
-Requires:   python-neutronclient >= 6.3.0
+Requires:   python2-alembic >= 0.8.10
+Requires:   python2-pecan >= 1.0.0
+Requires:   python2-pbr >= 2.0.0
+Requires:   python2-sqlalchemy >= 1.0.10
+Requires:   python2-babel >= 2.3.4
+Requires:   python2-requests >= 2.14.2
+Requires:   python2-keystonemiddleware >= 4.17.0
+Requires:   python2-netaddr >= 0.7.18
+Requires:   python2-neutronclient >= 6.3.0
 Requires:   python-webob >= 1.7.1
-Requires:   python-six >= 1.9.0
-Requires:   python-stevedore >= 1.20.0
-Requires:   python-oslo-config >= 2:4.0.0
-Requires:   python-oslo-context >= 2.14.0
-Requires:   python-oslo-db >= 4.24.0
-Requires:   python-oslo-i18n >= 2.1.0
-Requires:   python-oslo-serialization >= 1.10.0
-Requires:   python-oslo-log >= 3.22.0
-Requires:   python-oslo-messaging >= 5.24.2
-Requires:   python-oslo-middleware >= 3.27.0
-Requires:   python-oslo-policy >= 1.23.0
-Requires:   python-oslo-utils >= 3.20.0
-Requires:   python-barbicanclient >= 4.0.0
-Requires:   python-novaclient >= 1:9.0.0
-Requires:   pyOpenSSL >= 0.14
-Requires:   python-wsme
-Requires:   python-pyasn1
-Requires:   python-pyasn1-modules
-Requires:   python-jinja2 >= 2.7.2
-Requires:   python-taskflow >= 2.7.0
+Requires:   python2-six >= 1.10.0
+Requires:   python2-stevedore >= 1.20.0
+Requires:   python2-oslo-config >= 2:5.1.0
+Requires:   python2-oslo-context >= 2.19.2
+Requires:   python2-oslo-db >= 4.27.0
+Requires:   python2-oslo-i18n >= 3.15.3
+Requires:   python2-oslo-serialization >= 2.18.0
+Requires:   python2-oslo-log >= 3.36.0
+Requires:   python2-oslo-messaging >= 5.29.0
+Requires:   python2-oslo-middleware >= 3.31.0
+Requires:   python2-oslo-policy >= 1.30.0
+Requires:   python2-oslo-utils >= 3.33.0
+Requires:   python2-barbicanclient >= 4.0.0
+Requires:   python2-novaclient >= 9.1.0
+Requires:   pyOpenSSL >= 16.2.0
+Requires:   python2-wsme
+Requires:   python2-pyasn1
+Requires:   python2-pyasn1-modules
+Requires:   python2-jinja2 >= 2.8
+Requires:   python2-taskflow >= 2.16.0
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
-Requires:   python-cryptography >= 1.6
-Requires:   python-keystoneauth1 >= 3.1.0
-Requires:   python-oslo-reports >= 0.6.0
-Requires:   python-glanceclient >= 1:2.8.0
-Requires:   python-rfc3986
-Requires:   python-pyroute2 >= 0.4.3
-Requires:   python-ipaddress >= 1.0.7
-Requires:   python-gunicorn >= 19.0
-Requires:   python-cotyledon >= 1.3.0
+Requires:   python2-cryptography >= 1.9
+Requires:   python2-keystoneauth1 >= 3.3.0
+Requires:   python2-oslo-reports >= 1.18.0
+Requires:   python2-glanceclient >= 1:2.8.0
+Requires:   python2-rfc3986
+Requires:   python2-pyroute2 >= 0.4.21
+Requires:   python2-ipaddress >= 1.0.16
+Requires:   python2-gunicorn >= 19.0
+Requires:   python2-cotyledon >= 1.3.0
 
 %description -n python-%{service}
 %{common_desc}
@@ -135,14 +135,14 @@ Requires:   python-%{service} = %{version}-%{release}
 Requires:   python-%{service}-tests-golang = %{version}-%{release}
 
 Requires:   python-requests-mock
-Requires:   python-mock
-Requires:   python-subunit
-Requires:   python-oslotest
-Requires:   python-testrepository
-Requires:   python-testtools
-Requires:   python-testresources
-Requires:   python-testscenarios
-Requires:   python-tempest
+Requires:   python2-mock
+Requires:   python2-subunit
+Requires:   python2-oslotest
+Requires:   python2-testrepository
+Requires:   python2-testtools
+Requires:   python2-testresources
+Requires:   python2-testscenarios
+Requires:   python2-tempest
 Requires:   python-futures
 
 %description -n python-%{service}-tests
