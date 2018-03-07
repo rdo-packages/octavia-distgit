@@ -106,7 +106,7 @@ Requires:   pyOpenSSL >= 16.2.0
 Requires:   python2-wsme
 Requires:   python2-pyasn1
 Requires:   python2-pyasn1-modules
-Requires:   python2-jinja2 >= 2.8
+Requires:   python2-jinja2 >= 2.10
 Requires:   python2-taskflow >= 2.16.0
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
