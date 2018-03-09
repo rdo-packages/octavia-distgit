@@ -110,8 +110,7 @@ Requires:   python2-jinja2 >= 2.10
 Requires:   python2-taskflow >= 2.16.0
 Requires:   python-flask >= 0.10
 Requires:   python-netifaces >= 0.10.4
-# FIXME: system version is stuck to 1.7.2 for cryptography
-Requires:   python2-cryptography >= 1.7.2
+Requires:   python2-cryptography >= 1.9
 Requires:   python2-keystoneauth1 >= 3.3.0
 Requires:   python2-oslo-reports >= 1.18.0
 Requires:   python2-glanceclient >= 1:2.8.0
