@@ -16,6 +16,24 @@
       "revId": "8a74141f99a21febcc06764a47ab258ec43eed48",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ab14d0d_64763b40",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-03-09T15:04:40Z",
+      "side": 0,
+      "message": "https://bugzilla.redhat.com/show_bug.cgi?id\u003d1553752",
+      "parentUuid": "1ab14d0d_c4af4f93",
+      "revId": "8a74141f99a21febcc06764a47ab258ec43eed48",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
