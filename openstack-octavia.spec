@@ -102,7 +102,7 @@ Requires:   python2-oslo-policy >= 1.30.0
 Requires:   python2-oslo-utils >= 3.33.0
 Requires:   python2-barbicanclient >= 4.0.0
 Requires:   python2-novaclient >= 9.1.0
-Requires:   pyOpenSSL >= 16.2.0
+Requires:   pyOpenSSL >= 17.1.0
 Requires:   python2-wsme
 Requires:   python2-pyasn1
 Requires:   python2-pyasn1-modules
