@@ -4,7 +4,7 @@
 
 Name:       openstack-%{service}
 Version:    2.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
@@ -30,6 +30,7 @@ BuildRequires:  systemd
 BuildRequires:  openstack-macros
 
 # BuildRequires for running functional tests
+BuildRequires:  python2-stestr
 BuildRequires:  python-requests-mock
 BuildRequires:  python2-mock
 BuildRequires:  python2-subunit
@@ -374,7 +375,7 @@ exit 0
 %check
 export OS_TEST_PATH='./%{service}/tests/functional'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
-%{__python2} setup.py testr
+stestr run
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
@@ -508,6 +509,9 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 
 
 %changelog
+* Wed Mar 21 2018 Yatin Karel <ykarel@redhat.com> - 2.0.0-2
+- Switch test suite to stestr
+
 * Wed Feb 28 2018 RDO <dev@lists.rdoproject.org> 2.0.0-1
 - Update to 2.0.0
 
