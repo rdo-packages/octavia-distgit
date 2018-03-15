@@ -63,6 +63,7 @@ BuildRequires:  python2-oslo-messaging
 BuildRequires:  python2-pyasn1-modules
 BuildRequires:  python2-cotyledon
 BuildRequires:  python2-keystonemiddleware
+BuildRequires:  python-werkzeug
 
 Requires:   python-%{service} = %{version}-%{release}
 
@@ -101,7 +102,7 @@ Requires:   python2-oslo-messaging >= 5.29.0
 Requires:   python2-oslo-middleware >= 3.31.0
 Requires:   python2-oslo-policy >= 1.30.0
 Requires:   python2-oslo-utils >= 3.33.0
-Requires:   python2-barbicanclient >= 4.0.0
+Requires:   python2-barbicanclient >= 4.5.2
 Requires:   python2-novaclient >= 9.1.0
 Requires:   pyOpenSSL >= 16.2.0
 Requires:   python2-wsme
@@ -121,6 +122,7 @@ Requires:   python2-pyroute2 >= 0.4.21
 Requires:   python-ipaddress >= 1.0.16
 Requires:   python2-gunicorn >= 19.0
 Requires:   python2-cotyledon >= 1.3.0
+Requires:   python-werkzeug >= 0.9
 
 %description -n python-%{service}
 %{common_desc}
