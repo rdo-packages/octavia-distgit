@@ -518,3 +518,4 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 - Update to 2.0.0.0rc1
 
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=1a3b60234665a4fff01361d7797ec852767a5dcf
