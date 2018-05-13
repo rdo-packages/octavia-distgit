@@ -327,6 +327,9 @@ rm -rf %{buildroot}%{python2_sitelib}/tools
 install -d -m 755 %{buildroot}%{_sysconfdir}/%{service}
 mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
 
+# Move policy.json to proper location
+mv etc/policy/admin_or_owner-policy.json %{buildroot}%{_sysconfdir}/%{service}/policy.json
+
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
 install -p -D -m 644 elements/amphora-agent/install.d/amphora-agent-source-install/amphora-agent.logrotate %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
@@ -456,6 +459,7 @@ stestr run
 %dir %{_sysconfdir}/%{service}/conf.d/common
 %attr(-, root, %{service}) %{_datadir}/%{service}/%{service}-dist.conf
 %config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/%{service}.conf
+%config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/policy.json
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}
 %dir %attr(0755, %{service}, %{service}) %{_sharedstatedir}/%{service}
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
