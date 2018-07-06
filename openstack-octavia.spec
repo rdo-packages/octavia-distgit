@@ -64,6 +64,7 @@ BuildRequires:  python2-pyasn1-modules
 BuildRequires:  python2-cotyledon
 BuildRequires:  python2-keystonemiddleware
 BuildRequires:  python-werkzeug
+BuildRequires:  python2-distro
 
 Requires:   python-%{service} = %{version}-%{release}
 
@@ -122,6 +123,7 @@ Requires:   python-ipaddress >= 1.0.16
 Requires:   python2-gunicorn >= 19.0
 Requires:   python2-cotyledon >= 1.3.0
 Requires:   python-werkzeug >= 0.9
+Requires:   python2-distro >= 1.2.0
 
 %description -n python-%{service}
 %{common_desc}
