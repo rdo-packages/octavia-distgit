@@ -1,0 +1,9 @@
+Code-Review+2: chkumar246 <chkumar@redhat.com>
+Workflow+1: chkumar246 <chkumar@redhat.com>
+Code-Review+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 09 Jul 2018 06:05:04 +0000
+Reviewed-on: https://review.rdoproject.org/r/14648
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
