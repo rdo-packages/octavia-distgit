@@ -141,7 +141,6 @@ Group:      Applications/System
 BuildArch: noarch
 
 Requires:   python-%{service} = %{version}-%{release}
-Requires:   python-%{service}-tests-golang = %{version}-%{release}
 
 Requires:   python-requests-mock
 Requires:   python2-mock
