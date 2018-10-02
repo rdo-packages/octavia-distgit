@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_c55f0640",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-10-02T09:24:19Z",
+      "side": 1,
+      "message": "can be removed",
+      "range": {
+        "startLine": 177,
+        "startChar": 0,
+        "endLine": 177,
+        "endChar": 32
+      },
+      "revId": "2e1853d17378f4e4986d1552f1b12f2b37fd01fa",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_6554ba20",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-10-02T09:24:19Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 186,
+        "startChar": 0,
+        "endLine": 186,
+        "endChar": 26
+      },
+      "revId": "2e1853d17378f4e4986d1552f1b12f2b37fd01fa",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
