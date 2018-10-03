@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_0e275b65",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-10-03T13:05:03Z",
+      "side": 1,
+      "message": "this should be pulled by python-octavia(requires for openstack-octavia-common)",
+      "range": {
+        "startLine": 232,
+        "startChar": 12,
+        "endLine": 232,
+        "endChar": 33
+      },
+      "revId": "113653e18f4bdb57be6b926af70d45cde69cab28",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
