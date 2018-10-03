@@ -99,10 +99,10 @@ Requires(pre): shadow-utils
 
 %package -n python%{pyver}-%{service}
 Summary:    Octavia Python libraries
+BuildArch:  noarch
 %{?python_provide:%python_provide python%{pyver}-%{service}}
 Group:      Applications/System
 
-BuildArch:  noarch
 
 Requires:   python%{pyver}-alembic >= 0.9.6
 Requires:   python%{pyver}-pecan >= 1.1.1
