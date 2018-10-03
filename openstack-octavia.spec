@@ -193,6 +193,7 @@ Summary:    OpenStack Octavia Amphora Agent service
 Group:      Applications/System
 
 BuildArch: noarch
+Requires:   python%{pyver}-distro >= 1.2.0
 Requires:   openstack-%{service}-common = %{version}-%{release}
 
 
