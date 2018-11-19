@@ -50,6 +50,7 @@ BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-testresources
 BuildRequires:  python%{pyver}-testscenarios
 BuildRequires:  python%{pyver}-oslo-utils
+BuildRequires:  python%{pyver}-oslo-upgradecheck
 BuildRequires:  python%{pyver}-flask
 BuildRequires:  python%{pyver}-oslo-config
 BuildRequires:  python%{pyver}-oslo-log
@@ -126,6 +127,7 @@ Requires:   python%{pyver}-oslo-messaging >= 5.29.0
 Requires:   python%{pyver}-oslo-middleware >= 3.31.0
 Requires:   python%{pyver}-oslo-policy >= 1.30.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
+Requires:   python%{pyver}-oslo-upgradecheck
 Requires:   python%{pyver}-barbicanclient >= 4.5.2
 Requires:   python%{pyver}-novaclient >= 9.1.0
 Requires:   python%{pyver}-pyOpenSSL >= 17.1.0
@@ -509,6 +511,7 @@ stestr-%{pyver} run
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
 %dir %{_datarootdir}/%{service}
 %{_bindir}/haproxy-vrrp-check
+%{_bindir}/%{service}-status
 %{_bindir}/%{service}-db-manage
 
 %files amphora-agent
