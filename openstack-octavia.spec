@@ -533,3 +533,4 @@ stestr run
 * Thu Aug 16 2018 RDO <dev@lists.rdoproject.org> 3.0.0-0.1.0rc1
 - Update to 3.0.0.0rc1
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=4f8486e5d34313b054d047d0cdc41002be96840c
