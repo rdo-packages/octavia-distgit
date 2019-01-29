@@ -208,6 +208,10 @@ Summary:    Octavia tests golang
 
 BuildRequires:   golang
 BuildRequires:   glibc-static
+%if 0%{?rhel} > 7
+BuildRequires:  openssl-static
+BuildRequires:  zlib-static
+%endif
 
 %description -n python%{pyver}-%{service}-tests-golang
 %{common_desc}
@@ -337,7 +341,11 @@ export SKIP_PIP_INSTALL=1
 
 # Generate octavia-tests-httpd binary from httpd.go
 pushd %{service}/tests/contrib
+%if 0%{?rhel} > 7
+ go build -ldflags '-compressdwarf=false -linkmode external -extldflags "-static -ldl -lz"' -o %{service}-tests-httpd httpd.go
+%else
  go build -ldflags '-linkmode external -extldflags -static' -o %{service}-tests-httpd httpd.go
+%endif
 popd
 
 # Loop through values in octavia-dist.conf and make sure that the values
