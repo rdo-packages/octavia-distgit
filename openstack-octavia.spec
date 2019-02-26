@@ -76,6 +76,7 @@ BuildRequires:  python%{pyver}-cotyledon
 BuildRequires:  python%{pyver}-keystonemiddleware
 BuildRequires:  python%{pyver}-werkzeug
 BuildRequires:  python%{pyver}-distro
+BuildRequires:  python%{pyver}-castellan
 
 # Handle python2 exception
 %if %{pyver} == 2
