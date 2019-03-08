@@ -77,6 +77,8 @@ BuildRequires:  python%{pyver}-keystonemiddleware
 BuildRequires:  python%{pyver}-werkzeug
 BuildRequires:  python%{pyver}-distro
 BuildRequires:  python%{pyver}-castellan
+BuildRequires:  python%{pyver}-octavia-lib
+BuildRequires:  python%{pyver}-debtcollector
 
 # Handle python2 exception
 %if %{pyver} == 2
@@ -156,6 +158,8 @@ Requires:   python%{pyver}-castellan >= 0.16.0
 Requires:   python%{pyver}-PyMySQL >= 0.7.6
 Requires:   python%{pyver}-futurist >= 1.2.0
 Requires:   python%{pyver}-tenacity >= 4.9.0
+Requires:   python%{pyver}-octavia-lib >= 1.1.1
+Requires:   python%{pyver}-debtcollector >= 1.19.0
 
 # Handle python2 exception
 %if %{pyver} == 2
