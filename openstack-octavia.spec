@@ -134,7 +134,7 @@ Requires:   python%{pyver}-oslo-messaging >= 5.29.0
 Requires:   python%{pyver}-oslo-middleware >= 3.31.0
 Requires:   python%{pyver}-oslo-policy >= 1.30.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
-Requires:   python%{pyver}-oslo-upgradecheck
+Requires:   python%{pyver}-oslo-upgradecheck >= 0.1.0
 Requires:   python%{pyver}-barbicanclient >= 4.5.2
 Requires:   python%{pyver}-novaclient >= 9.1.0
 Requires:   python%{pyver}-pyOpenSSL >= 17.1.0
@@ -160,11 +160,13 @@ Requires:   python%{pyver}-futurist >= 1.2.0
 Requires:   python%{pyver}-tenacity >= 4.9.0
 Requires:   python%{pyver}-octavia-lib >= 1.1.1
 Requires:   python%{pyver}-debtcollector >= 1.19.0
+Requires:   python%{pyver}-jsonschema
 
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:   python-netifaces >= 0.10.4
 Requires:   python-ipaddress >= 1.0.17
+Requires:   python-futures
 %else
 Requires:   python%{pyver}-netifaces >= 0.10.4
 %endif
