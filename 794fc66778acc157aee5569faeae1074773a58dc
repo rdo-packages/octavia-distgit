@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c25cd840_2345b2d5",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2019-03-19T08:23:48Z",
+      "side": 1,
+      "message": "\u003e\u003d2.6.0\n\nhttps://github.com/openstack/octavia/blob/ae26cf9ebf7986148f9be2ddcc67cc185e88c7e0/requirements.txt#L46",
+      "range": {
+        "startLine": 163,
+        "startChar": 27,
+        "endLine": 163,
+        "endChar": 37
+      },
+      "revId": "794fc66778acc157aee5569faeae1074773a58dc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aad9effd_a0bf3dd1",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2019-03-19T08:23:48Z",
+      "side": 1,
+      "message": "\u003e\u003d 3.0.0\n\nhttps://github.com/openstack/octavia/blob/ae26cf9ebf7986148f9be2ddcc67cc185e88c7e0/requirements.txt#L42",
+      "range": {
+        "startLine": 169,
+        "startChar": 19,
+        "endLine": 169,
+        "endChar": 26
+      },
+      "revId": "794fc66778acc157aee5569faeae1074773a58dc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
