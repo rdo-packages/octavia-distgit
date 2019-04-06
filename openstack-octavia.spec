@@ -1,4 +1,4 @@
-%global milestone .0rc1
+%global milestone .0rc3
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
@@ -19,7 +19,7 @@
 
 Name:       openstack-%{service}
 Version:    4.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    0.2%{?milestone}%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
@@ -27,7 +27,7 @@ URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
 #
-# patches_base=4.0.0.0rc1
+# patches_base=4.0.0.0rc3
 #
 
 Source1:    %{service}.logrotate
@@ -582,6 +582,9 @@ stestr-%{pyver} run
 
 
 %changelog
+* Sat Apr 06 2019 RDO <dev@lists.rdoproject.org> 4.0.0-0.2.0rc1
+- Update to 4.0.0.0rc3
+
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 4.0.0-0.1.0rc1
 - Update to 4.0.0.0rc1
 
