@@ -371,12 +371,6 @@ done < %{SOURCE30}
 install -d -p %{buildroot}%{_bindir}
 install -p -m 0755 %{service}/tests/contrib/%{service}-tests-httpd %{buildroot}%{_bindir}
 
-# Replace the path with its binary
-PATH1=%{buildroot}%{pyver_sitelib}/%{service}/tests/tempest/v1/scenario/base.py
-PATH2=%{buildroot}%{pyver_sitelib}/%{service}/tests/tempest/v2/scenario/base.py
-sed -i "s#self._build_static_httpd()#'/usr/bin/%{service}-tests-httpd'#g" $PATH1
-sed -i "s#self._build_static_httpd()#'/usr/bin/%{service}-tests-httpd'#g" $PATH2
-
 # Remove httpd.go code
 rm  %{buildroot}%{pyver_sitelib}/%{service}/tests/contrib/httpd.go
 
