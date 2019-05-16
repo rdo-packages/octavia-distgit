@@ -374,9 +374,6 @@ install -p -m 0755 %{service}/tests/contrib/%{service}-tests-httpd %{buildroot}%
 # Remove httpd.go code
 rm  %{buildroot}%{pyver_sitelib}/%{service}/tests/contrib/httpd.go
 
-# Create fake egg-info for the tempest plugin
-%pyver_entrypoint
-
 # Remove unused files
 rm -rf %{buildroot}%{pyver_sitelib}/bin
 rm -rf %{buildroot}%{pyver_sitelib}/doc
@@ -495,11 +492,9 @@ stestr-%{pyver} run
 %postun housekeeping
 %systemd_postun_with_restart %{service}-housekeeping.service
 
-# Create a tempest plugin fake egg-info file
 %files -n python%{pyver}-%{service}-tests
 %license LICENSE
 %{pyver_sitelib}/%{service}/tests
-%{pyver_sitelib}/%{service}_tests.egg-info
 
 %files -n python%{pyver}-%{service}-tests-golang
 %{_bindir}/%{service}-tests-httpd
