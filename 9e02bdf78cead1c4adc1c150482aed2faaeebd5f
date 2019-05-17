@@ -34,6 +34,24 @@
       "revId": "9e02bdf78cead1c4adc1c150482aed2faaeebd5f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6ff65b_ebbc0359",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2019-05-17T14:56:38Z",
+      "side": 1,
+      "message": "Oops! Here: https://review.opendev.org/#/c/659815/",
+      "parentUuid": "208d71ab_026787e2",
+      "revId": "9e02bdf78cead1c4adc1c150482aed2faaeebd5f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
