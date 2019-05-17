@@ -184,7 +184,6 @@ Group:      Applications/System
 BuildArch: noarch
 
 Requires:   python%{pyver}-%{service} = %{version}-%{release}
-Requires:   python%{pyver}-%{service}-tests-golang = %{version}-%{release}
 
 Requires:   python%{pyver}-mock
 Requires:   python%{pyver}-subunit
@@ -207,22 +206,6 @@ Requires:   python%{pyver}-requests-mock
 %{common_desc}
 
 This package contains Octavia test files.
-
-%package -n python%{pyver}-%{service}-tests-golang
-Summary:    Octavia tests golang
-%{?python_provide:%python_provide python%{pyver}-%{service}-tests-golang}
-
-BuildRequires:   golang
-BuildRequires:   glibc-static
-%if 0%{?rhel} > 7
-BuildRequires:  openssl-static
-BuildRequires:  zlib-static
-%endif
-
-%description -n python%{pyver}-%{service}-tests-golang
-%{common_desc}
-
-This package contains Octavia tempest golang httpd code.
 
 %package common
 Summary:    Octavia common files
@@ -345,15 +328,6 @@ export PBR_VERSION=%{version}
 export SKIP_PIP_INSTALL=1
 %{pyver_build}
 
-# Generate octavia-tests-httpd binary from httpd.go
-pushd %{service}/tests/contrib
-%if 0%{?rhel} > 7
- go build -ldflags '-compressdwarf=false -linkmode external -extldflags "-static -ldl -lz"' -o %{service}-tests-httpd httpd.go
-%else
- go build -ldflags '-linkmode external -extldflags -static' -o %{service}-tests-httpd httpd.go
-%endif
-popd
-
 # Loop through values in octavia-dist.conf and make sure that the values
 # are substituted into the octavia.conf as comments. Some of these values
 # will have been uncommented as a way of upstream setting defaults outside
@@ -366,11 +340,7 @@ done < %{SOURCE30}
 %install
 %{pyver_install}
 
-# Move httpd binary to proper place
-install -d -p %{buildroot}%{_bindir}
-install -p -m 0755 %{service}/tests/contrib/%{service}-tests-httpd %{buildroot}%{_bindir}
-
-# Remove httpd.go code
+# Remove httpd.go code, there is duplication with the tempest plugin
 rm  %{buildroot}%{pyver_sitelib}/%{service}/tests/contrib/httpd.go
 
 # Remove unused files
@@ -494,9 +464,6 @@ stestr-%{pyver} run
 %files -n python%{pyver}-%{service}-tests
 %license LICENSE
 %{pyver_sitelib}/%{service}/tests
-
-%files -n python%{pyver}-%{service}-tests-golang
-%{_bindir}/%{service}-tests-httpd
 
 %files -n python%{pyver}-%{service}
 %license LICENSE
