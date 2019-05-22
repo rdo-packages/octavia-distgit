@@ -384,7 +384,7 @@ exit 0
 %check
 export OS_TEST_PATH='./%{service}/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
-stestr-%{pyver} run
+PYTHON=%{pyver_bin} stestr-%{pyver} run
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
