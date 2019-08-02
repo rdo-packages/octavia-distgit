@@ -516,3 +516,4 @@ PYTHON=%{pyver_bin} stestr-%{pyver} run
 
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=2111d9e264fabd0e28c1287a849bfc677ab97c79
