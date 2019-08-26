@@ -41,6 +41,7 @@ BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  systemd
 BuildRequires:  openstack-macros
+BuildRequires:  git
 
 # BuildRequires for running functional tests
 BuildRequires:  python%{pyver}-stestr
@@ -335,12 +336,13 @@ This package contains a diskimage-builder script for creating Octavia Amphora im
 
 
 %prep
-%setup -q -n %{service}-%{upstream_version}
+%autosetup -n %{service}-%{upstream_version} -S git
 
 find %{service} -name \*.py -exec sed -i '/\/usr\/bin\/env python/{d;q}' {} +
 
 # Let's handle dependencies ourseleves
 rm -f requirements.txt
+rm -rf octavia.egg-info
 
 
 %build
