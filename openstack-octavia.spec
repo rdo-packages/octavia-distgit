@@ -78,7 +78,7 @@ BuildRequires:  python%{pyver}-keystonemiddleware
 BuildRequires:  python%{pyver}-werkzeug
 BuildRequires:  python%{pyver}-distro
 BuildRequires:  python%{pyver}-castellan
-BuildRequires:  python%{pyver}-octavia-lib >= 1.2.0
+BuildRequires:  python%{pyver}-octavia-lib >= 1.3.1
 BuildRequires:  python%{pyver}-debtcollector
 BuildRequires:  python%{pyver}-cinderclient
 
@@ -120,7 +120,7 @@ Requires:   python%{pyver}-sqlalchemy >= 1.2.0
 Requires:   python%{pyver}-babel >= 2.3.4
 Requires:   python%{pyver}-requests >= 2.14.2
 Requires:   python%{pyver}-keystonemiddleware >= 4.17.0
-Requires:   python%{pyver}-netaddr >= 0.7.18
+Requires:   python%{pyver}-netaddr >= 0.7.19
 Requires:   python%{pyver}-neutronclient >= 6.7.0
 Requires:   python%{pyver}-webob >= 1.7.1
 Requires:   python%{pyver}-six >= 1.10.0
@@ -131,13 +131,13 @@ Requires:   python%{pyver}-oslo-db >= 4.27.0
 Requires:   python%{pyver}-oslo-i18n >= 3.15.3
 Requires:   python%{pyver}-oslo-serialization >= 2.18.0
 Requires:   python%{pyver}-oslo-log >= 3.36.0
-Requires:   python%{pyver}-oslo-messaging >= 5.29.0
+Requires:   python%{pyver}-oslo-messaging >= 6.3.0
 Requires:   python%{pyver}-oslo-middleware >= 3.31.0
 Requires:   python%{pyver}-oslo-policy >= 1.30.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
 Requires:   python%{pyver}-oslo-upgradecheck >= 0.1.0
 Requires:   python%{pyver}-barbicanclient >= 4.5.2
-Requires:   python%{pyver}-novaclient >= 9.1.0
+Requires:   python%{pyver}-novaclient >= 1:9.1.0
 Requires:   python%{pyver}-pyOpenSSL >= 17.1.0
 Requires:   python%{pyver}-wsme
 Requires:   python%{pyver}-pyasn1
@@ -151,15 +151,15 @@ Requires:   python%{pyver}-oslo-reports >= 1.18.0
 Requires:   python%{pyver}-glanceclient >= 1:2.8.0
 Requires:   python%{pyver}-rfc3986
 Requires:   python%{pyver}-pyroute2 >= 0.4.21
-Requires:   python%{pyver}-gunicorn >= 19.0
+Requires:   python%{pyver}-gunicorn >= 19.9.0
 Requires:   python%{pyver}-cotyledon >= 1.3.0
-Requires:   python%{pyver}-werkzeug >= 0.9
+Requires:   python%{pyver}-werkzeug >= 0.14.1
 Requires:   python%{pyver}-distro >= 1.2.0
 Requires:   python%{pyver}-castellan >= 0.16.0
 Requires:   python%{pyver}-PyMySQL >= 0.7.6
 Requires:   python%{pyver}-futurist >= 1.2.0
-Requires:   python%{pyver}-tenacity >= 4.9.0
-Requires:   python%{pyver}-octavia-lib >= 1.2.0
+Requires:   python%{pyver}-tenacity >= 5.0.2
+Requires:   python%{pyver}-octavia-lib >= 1.3.1
 Requires:   python%{pyver}-debtcollector >= 1.19.0
 Requires:   python%{pyver}-jsonschema >= 2.6.0
 Requires:   python%{pyver}-cinderclient >= 3.3.0
