@@ -22,6 +22,30 @@
       "revId": "c212bf0680062328dff91a2022d0dfb1052e14fb",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee152136_fe5aa6cb",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-09-27T08:04:51Z",
+      "side": 1,
+      "message": "latest build in RDO on CentOS7 is 5.0.2?, I see in https://github.com/openstack/octavia/commit/b32064cdf2d5c70140a84e2497931941c4ee6887 that it was updated to pass unit test, which i see are passing with 5.0.2 in http://logs.rdoproject.org/71/22571/1/check/legacy-DLRN-rpmbuild/aabe719/buildset/centos/current/rpmbuild.log.\n\nCould we keep 5.0.2?",
+      "parentUuid": "389b29c5_36e7af28",
+      "range": {
+        "startLine": 161,
+        "startChar": 39,
+        "endLine": 161,
+        "endChar": 44
+      },
+      "revId": "c212bf0680062328dff91a2022d0dfb1052e14fb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
