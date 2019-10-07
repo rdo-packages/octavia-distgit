@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "929ea86c_f7e967cb",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-10-07T13:37:33Z",
+      "side": 1,
+      "message": "seems bug in rdopkg",
+      "range": {
+        "startLine": 526,
+        "startChar": 60,
+        "endLine": 526,
+        "endChar": 63
+      },
+      "revId": "cb60016b792c6590a8ba395b87d89fb73ad00bec",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
