@@ -17,7 +17,7 @@
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-Version:    4.0.0
+Version:    4.1.0
 Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
@@ -133,7 +133,7 @@ Requires:   python%{pyver}-oslo-db >= 4.27.0
 Requires:   python%{pyver}-oslo-i18n >= 3.15.3
 Requires:   python%{pyver}-oslo-serialization >= 2.18.0
 Requires:   python%{pyver}-oslo-log >= 3.36.0
-Requires:   python%{pyver}-oslo-messaging >= 5.29.0
+Requires:   python%{pyver}-oslo-messaging >= 6.3.0
 Requires:   python%{pyver}-oslo-middleware >= 3.31.0
 Requires:   python%{pyver}-oslo-policy >= 1.30.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
@@ -581,6 +581,9 @@ stestr-%{pyver} run
 
 
 %changelog
+* Mon Oct 07 2019 RDO <dev@lists.rdoproject.org> 4.1.0-1
+- Update to 4.1.0
+
 * Wed Apr 10 2019 RDO <dev@lists.rdoproject.org> 4.0.0-1
 - Update to 4.0.0
 
