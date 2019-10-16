@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0568a190_b2a6a2dc",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2019-10-16T13:19:17Z",
+      "side": 1,
+      "message": "Same comment as in octavia-dahsboard: do we need to re-add patches_base and set it to 5.0.0?",
+      "revId": "6be7716ce7b2387dd3ce686709c38e43f88fc3c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
