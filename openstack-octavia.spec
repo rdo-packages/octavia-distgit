@@ -84,12 +84,10 @@ BuildRequires:  python%{pyver}-cinderclient
 
 # Handle python2 exception
 %if %{pyver} == 2
-BuildRequires:  python-d2to1
 BuildRequires:  python-requests-mock
 BuildRequires:  python-netifaces
 BuildRequires:  python-futures
 %else
-BuildRequires:  python%{pyver}-d2to1
 BuildRequires:  python%{pyver}-requests-mock
 BuildRequires:  python%{pyver}-netifaces
 %endif
