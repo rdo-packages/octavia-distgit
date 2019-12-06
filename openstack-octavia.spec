@@ -518,3 +518,4 @@ PYTHON=%{pyver_bin} stestr-%{pyver} run
 
 
 %changelog
+
