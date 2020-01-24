@@ -519,4 +519,3 @@ PYTHON=%{pyver_bin} stestr-%{pyver} run --black-regex 'test_cmd_get_version_of_i
 
 
 %changelog
-
