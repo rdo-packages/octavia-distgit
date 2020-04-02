@@ -519,3 +519,4 @@ PYTHON=%{pyver_bin} stestr-%{pyver} run --black-regex 'test_cmd_get_version_of_i
 
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia/commit/?id=5f30b749ac615dee118b3c81c373c48205ad349b
