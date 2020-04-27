@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global service octavia
@@ -34,65 +22,58 @@ Source14:   %{service}-housekeeping.service
 Source30:   %{service}-dist.conf
 
 BuildArch:      noarch
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-setuptools
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr
+BuildRequires:  python3-setuptools
 BuildRequires:  systemd
 BuildRequires:  openstack-macros
 BuildRequires:  git
 
 # BuildRequires for running functional tests
-BuildRequires:  python%{pyver}-stestr
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-subunit
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-testrepository
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-testresources
-BuildRequires:  python%{pyver}-testscenarios
-BuildRequires:  python%{pyver}-oslo-utils
-BuildRequires:  python%{pyver}-oslo-upgradecheck
-BuildRequires:  python%{pyver}-flask
-BuildRequires:  python%{pyver}-oslo-config
-BuildRequires:  python%{pyver}-oslo-log
-BuildRequires:  python%{pyver}-glanceclient
-BuildRequires:  python%{pyver}-wsme
-BuildRequires:  python%{pyver}-barbicanclient
-BuildRequires:  python%{pyver}-cryptography
-BuildRequires:  python%{pyver}-gunicorn
-BuildRequires:  python%{pyver}-keystoneauth1
-BuildRequires:  python%{pyver}-netaddr
-BuildRequires:  python%{pyver}-novaclient
-BuildRequires:  python%{pyver}-taskflow
-BuildRequires:  python%{pyver}-neutronclient
-BuildRequires:  python%{pyver}-oslo-db
-BuildRequires:  python%{pyver}-oslo-reports
-BuildRequires:  python%{pyver}-oslo-policy
-BuildRequires:  python%{pyver}-pecan
-BuildRequires:  python%{pyver}-pyroute2
-BuildRequires:  python%{pyver}-pyasn1
-BuildRequires:  python%{pyver}-oslo-messaging
-BuildRequires:  python%{pyver}-pyasn1-modules
-BuildRequires:  python%{pyver}-cotyledon
-BuildRequires:  python%{pyver}-keystonemiddleware
-BuildRequires:  python%{pyver}-werkzeug
-BuildRequires:  python%{pyver}-distro
-BuildRequires:  python%{pyver}-castellan
-BuildRequires:  python%{pyver}-octavia-lib >= 1.3.1
-BuildRequires:  python%{pyver}-debtcollector
-BuildRequires:  python%{pyver}-cinderclient
+BuildRequires:  python3-stestr
+BuildRequires:  python3-mock
+BuildRequires:  python3-subunit
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-testrepository
+BuildRequires:  python3-testtools
+BuildRequires:  python3-testresources
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-oslo-utils
+BuildRequires:  python3-oslo-upgradecheck
+BuildRequires:  python3-flask
+BuildRequires:  python3-oslo-config
+BuildRequires:  python3-oslo-log
+BuildRequires:  python3-glanceclient
+BuildRequires:  python3-wsme
+BuildRequires:  python3-barbicanclient
+BuildRequires:  python3-cryptography
+BuildRequires:  python3-gunicorn
+BuildRequires:  python3-keystoneauth1
+BuildRequires:  python3-netaddr
+BuildRequires:  python3-novaclient
+BuildRequires:  python3-taskflow
+BuildRequires:  python3-neutronclient
+BuildRequires:  python3-oslo-db
+BuildRequires:  python3-oslo-reports
+BuildRequires:  python3-oslo-policy
+BuildRequires:  python3-pecan
+BuildRequires:  python3-pyroute2
+BuildRequires:  python3-pyasn1
+BuildRequires:  python3-oslo-messaging
+BuildRequires:  python3-pyasn1-modules
+BuildRequires:  python3-cotyledon
+BuildRequires:  python3-keystonemiddleware
+BuildRequires:  python3-werkzeug
+BuildRequires:  python3-distro
+BuildRequires:  python3-castellan
+BuildRequires:  python3-octavia-lib >= 1.3.1
+BuildRequires:  python3-debtcollector
+BuildRequires:  python3-cinderclient
 
-# Handle python2 exception
-%if %{pyver} == 2
-BuildRequires:  python-requests-mock
-BuildRequires:  python-netifaces
-BuildRequires:  python-futures
-%else
-BuildRequires:  python%{pyver}-requests-mock
-BuildRequires:  python%{pyver}-netifaces
-%endif
+BuildRequires:  python3-requests-mock
+BuildRequires:  python3-netifaces
 
-Requires:   python%{pyver}-%{service} = %{version}-%{release}
+Requires:   python3-%{service} = %{version}-%{release}
 
 Requires(pre): shadow-utils
 %if 0%{?rhel} && 0%{?rhel} < 8
@@ -105,103 +86,92 @@ Requires(pre): shadow-utils
 %{common_desc}
 
 
-%package -n python%{pyver}-%{service}
+%package -n python3-%{service}
 Summary:    Octavia Python libraries
-%{?python_provide:%python_provide python%{pyver}-%{service}}
+%{?python_provide:%python_provide python3-%{service}}
 Group:      Applications/System
 
 
-Requires:   python%{pyver}-alembic >= 0.9.6
-Requires:   python%{pyver}-pecan >= 1.1.1
-Requires:   python%{pyver}-pbr >= 2.0.0
-Requires:   python%{pyver}-sqlalchemy >= 1.2.0
-Requires:   python%{pyver}-babel >= 2.3.4
-Requires:   python%{pyver}-requests >= 2.14.2
-Requires:   python%{pyver}-keystonemiddleware >= 4.17.0
-Requires:   python%{pyver}-netaddr >= 0.7.19
-Requires:   python%{pyver}-neutronclient >= 6.7.0
-Requires:   python%{pyver}-webob >= 1.7.1
-Requires:   python%{pyver}-six >= 1.10.0
-Requires:   python%{pyver}-stevedore >= 1.20.0
-Requires:   python%{pyver}-oslo-config >= 2:5.2.0
-Requires:   python%{pyver}-oslo-context >= 2.19.2
-Requires:   python%{pyver}-oslo-db >= 4.27.0
-Requires:   python%{pyver}-oslo-i18n >= 3.15.3
-Requires:   python%{pyver}-oslo-serialization >= 2.18.0
-Requires:   python%{pyver}-oslo-log >= 3.36.0
-Requires:   python%{pyver}-oslo-messaging >= 6.3.0
-Requires:   python%{pyver}-oslo-middleware >= 3.31.0
-Requires:   python%{pyver}-oslo-policy >= 1.30.0
-Requires:   python%{pyver}-oslo-utils >= 3.33.0
-Requires:   python%{pyver}-oslo-upgradecheck >= 0.1.0
-Requires:   python%{pyver}-barbicanclient >= 4.5.2
-Requires:   python%{pyver}-novaclient >= 1:9.1.0
-Requires:   python%{pyver}-pyOpenSSL >= 17.1.0
-Requires:   python%{pyver}-wsme
-Requires:   python%{pyver}-pyasn1
-Requires:   python%{pyver}-pyasn1-modules
-Requires:   python%{pyver}-jinja2 >= 2.10
-Requires:   python%{pyver}-taskflow >= 2.16.0
-Requires:   python%{pyver}-flask >= 0.10
-Requires:   python%{pyver}-cryptography >= 2.1
-Requires:   python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:   python%{pyver}-oslo-reports >= 1.18.0
-Requires:   python%{pyver}-glanceclient >= 1:2.8.0
-Requires:   python%{pyver}-rfc3986
-Requires:   python%{pyver}-pyroute2 >= 0.4.21
-Requires:   python%{pyver}-gunicorn >= 19.9.0
-Requires:   python%{pyver}-cotyledon >= 1.3.0
-Requires:   python%{pyver}-werkzeug >= 0.14.1
-Requires:   python%{pyver}-distro >= 1.2.0
-Requires:   python%{pyver}-castellan >= 0.16.0
-Requires:   python%{pyver}-PyMySQL >= 0.7.6
-Requires:   python%{pyver}-futurist >= 1.2.0
-Requires:   python%{pyver}-tenacity >= 5.0.2
-Requires:   python%{pyver}-octavia-lib >= 1.3.1
-Requires:   python%{pyver}-debtcollector >= 1.19.0
-Requires:   python%{pyver}-jsonschema >= 2.6.0
-Requires:   python%{pyver}-cinderclient >= 3.3.0
+Requires:   python3-alembic >= 0.9.6
+Requires:   python3-pecan >= 1.3.2
+Requires:   python3-pbr >= 2.0.0
+Requires:   python3-sqlalchemy >= 1.2.0
+Requires:   python3-babel >= 2.3.4
+Requires:   python3-requests >= 2.14.2
+Requires:   python3-keystonemiddleware >= 4.17.0
+Requires:   python3-netaddr >= 0.7.19
+Requires:   python3-neutronclient >= 6.7.0
+Requires:   python3-webob >= 1.8.2
+Requires:   python3-stevedore >= 1.20.0
+Requires:   python3-oslo-config >= 2:5.2.0
+Requires:   python3-oslo-context >= 2.19.2
+Requires:   python3-oslo-db >= 4.27.0
+Requires:   python3-oslo-i18n >= 3.15.3
+Requires:   python3-oslo-serialization >= 2.18.0
+Requires:   python3-oslo-log >= 3.36.0
+Requires:   python3-oslo-messaging >= 6.3.0
+Requires:   python3-oslo-middleware >= 4.0.1
+Requires:   python3-oslo-policy >= 1.30.0
+Requires:   python3-oslo-utils >= 3.33.0
+Requires:   python3-oslo-upgradecheck >= 0.1.0
+Requires:   python3-barbicanclient >= 4.5.2
+Requires:   python3-novaclient >= 1:9.1.0
+Requires:   python3-pyOpenSSL >= 17.1.0
+Requires:   python3-wsme
+Requires:   python3-pyasn1
+Requires:   python3-pyasn1-modules
+Requires:   python3-jinja2 >= 2.10
+Requires:   python3-taskflow >= 4.1.0
+Requires:   python3-flask >= 0.10
+Requires:   python3-cryptography >= 2.1
+Requires:   python3-keystoneauth1 >= 3.4.0
+Requires:   python3-oslo-reports >= 1.18.0
+Requires:   python3-glanceclient >= 1:2.8.0
+Requires:   python3-rfc3986
+Requires:   python3-pyroute2 >= 0.4.21
+Requires:   python3-gunicorn >= 19.9.0
+Requires:   python3-cotyledon >= 1.3.0
+Requires:   python3-werkzeug >= 0.14.1
+Requires:   python3-distro >= 1.2.0
+Requires:   python3-castellan >= 0.16.0
+Requires:   python3-PyMySQL >= 0.7.6
+Requires:   python3-futurist >= 1.2.0
+Requires:   python3-tenacity >= 5.0.4
+Requires:   python3-octavia-lib >= 2.0.0
+Requires:   python3-debtcollector >= 1.19.0
+Requires:   python3-jsonschema >= 2.6.0
+Requires:   python3-cinderclient >= 3.3.0
+Requires:   python3-setproctitle >= 1.1.10
+Requires:   python3-simplejson >= 3.13.2
+Requires:   python3-sqlalchemy-utils >= 0.30.11
 
-# Handle python2 exception
-%if %{pyver} == 2
-Requires:   python-netifaces >= 0.10.4
-Requires:   python-ipaddress >= 1.0.17
-Requires:   python-futures >= 3.0.0
-%else
-Requires:   python%{pyver}-netifaces >= 0.10.4
-%endif
+Requires:   python3-netifaces >= 0.10.4
 
 
-%description -n python%{pyver}-%{service}
+%description -n python3-%{service}
 %{common_desc}
 
 This package contains the Octavia Python library.
 
-%package -n python%{pyver}-%{service}-tests
+%package -n python3-%{service}-tests
 Summary:    Octavia tests
-%{?python_provide:%python_provide python%{pyver}-%{service}-tests}
+%{?python_provide:%python_provide python3-%{service}-tests}
 Group:      Applications/System
 
-Requires:   python%{pyver}-%{service} = %{version}-%{release}
+Requires:   python3-%{service} = %{version}-%{release}
 
-Requires:   python%{pyver}-mock
-Requires:   python%{pyver}-subunit
-Requires:   python%{pyver}-oslotest
-Requires:   python%{pyver}-testrepository
-Requires:   python%{pyver}-testtools
-Requires:   python%{pyver}-testresources
-Requires:   python%{pyver}-testscenarios
-Requires:   python%{pyver}-tempest
+Requires:   python3-mock
+Requires:   python3-subunit
+Requires:   python3-oslotest
+Requires:   python3-testrepository
+Requires:   python3-testtools
+Requires:   python3-testresources
+Requires:   python3-testscenarios
+Requires:   python3-tempest
 
-# Handle python2 exception
-%if %{pyver} == 2
-Requires:   python-requests-mock
-Requires:   python-futures
-%else
-Requires:   python%{pyver}-requests-mock
-%endif
+Requires:   python3-requests-mock
 
-%description -n python%{pyver}-%{service}-tests
+%description -n python3-%{service}-tests
 %{common_desc}
 
 This package contains Octavia test files.
@@ -210,7 +180,7 @@ This package contains Octavia test files.
 Summary:    Octavia common files
 Group:      Applications/System
 
-Requires:   python%{pyver}-%{service} = %{version}-%{release}
+Requires:   python3-%{service} = %{version}-%{release}
 
 
 %description common
@@ -292,7 +262,7 @@ Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   dib-utils
-Requires:   diskimage-builder >= 1.18.0
+Requires:   diskimage-builder >= 2.24.0
 
 
 %description diskimage-create
@@ -315,7 +285,7 @@ rm -rf octavia.egg-info
 %build
 export PBR_VERSION=%{version}
 export SKIP_PIP_INSTALL=1
-%{pyver_build}
+%{py3_build}
 
 # Loop through values in octavia-dist.conf and make sure that the values
 # are substituted into the octavia.conf as comments. Some of these values
@@ -327,12 +297,12 @@ while read name eq value; do
 done < %{SOURCE30}
 
 %install
-%{pyver_install}
+%{py3_install}
 
 # Remove unused files
-rm -rf %{buildroot}%{pyver_sitelib}/bin
-rm -rf %{buildroot}%{pyver_sitelib}/doc
-rm -rf %{buildroot}%{pyver_sitelib}/tools
+rm -rf %{buildroot}%{python3_sitelib}/bin
+rm -rf %{buildroot}%{python3_sitelib}/doc
+rm -rf %{buildroot}%{python3_sitelib}/tools
 
 # Move config files to proper location
 install -d -m 755 %{buildroot}%{_sysconfdir}/%{service}
@@ -389,7 +359,7 @@ export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 # We do not want to run linter checks here
 rm -f octavia/tests/unit/test_hacking.py
 # Skip test until issue created by https://review.opendev.org/#/c/697128/ is fixed
-PYTHON=%{pyver_bin} stestr-%{pyver} run --black-regex 'test_cmd_get_version_of_installed_package_mapped'
+PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_package_mapped'
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
@@ -450,15 +420,15 @@ PYTHON=%{pyver_bin} stestr-%{pyver} run --black-regex 'test_cmd_get_version_of_i
 %postun housekeeping
 %systemd_postun_with_restart %{service}-housekeeping.service
 
-%files -n python%{pyver}-%{service}-tests
+%files -n python3-%{service}-tests
 %license LICENSE
-%{pyver_sitelib}/%{service}/tests
+%{python3_sitelib}/%{service}/tests
 
-%files -n python%{pyver}-%{service}
+%files -n python3-%{service}
 %license LICENSE
-%{pyver_sitelib}/%{service}
-%{pyver_sitelib}/%{service}-*.egg-info
-%exclude %{pyver_sitelib}/%{service}/tests
+%{python3_sitelib}/%{service}
+%{python3_sitelib}/%{service}-*.egg-info
+%exclude %{python3_sitelib}/%{service}/tests
 
 
 %files common
