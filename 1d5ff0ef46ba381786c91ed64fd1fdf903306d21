@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "86690f21_e023a38b",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d0.8.10",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dc828559_401b68f9",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d1.0.10",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "626bdde8_fd40983e",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d0.8.0",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3938cc4_3a69bbd6",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d0.1.8",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad129c57_e5605dda",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d0.0.6",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "067f356c_58d80f10",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "\u003e\u003d0.3.1",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36eac1b4_96b2bbc5",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-28T07:58:12Z",
+      "side": 1,
+      "message": "Maybe the empty line could be removed?",
+      "revId": "1d5ff0ef46ba381786c91ed64fd1fdf903306d21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
