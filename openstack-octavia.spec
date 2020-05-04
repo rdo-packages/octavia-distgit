@@ -112,10 +112,10 @@ Summary:    Octavia Python libraries
 Group:      Applications/System
 
 
-Requires:   python%{pyver}-alembic >= 0.9.6
-Requires:   python%{pyver}-pecan >= 1.1.1
+Requires:   python%{pyver}-alembic >= 0.8.10
+Requires:   python%{pyver}-pecan >= 1.1.0
 Requires:   python%{pyver}-pbr >= 2.0.0
-Requires:   python%{pyver}-sqlalchemy >= 1.2.0
+Requires:   python%{pyver}-sqlalchemy >= 1.0.10
 Requires:   python%{pyver}-babel >= 2.3.4
 Requires:   python%{pyver}-requests >= 2.14.2
 Requires:   python%{pyver}-keystonemiddleware >= 4.17.0
@@ -138,9 +138,9 @@ Requires:   python%{pyver}-oslo-upgradecheck >= 0.1.0
 Requires:   python%{pyver}-barbicanclient >= 4.5.2
 Requires:   python%{pyver}-novaclient >= 1:9.1.0
 Requires:   python%{pyver}-pyOpenSSL >= 17.1.0
-Requires:   python%{pyver}-wsme
-Requires:   python%{pyver}-pyasn1
-Requires:   python%{pyver}-pyasn1-modules
+Requires:   python%{pyver}-wsme >= 0.8.0
+Requires:   python%{pyver}-pyasn1 >= 0.1.8
+Requires:   python%{pyver}-pyasn1-modules >= 0.0.6
 Requires:   python%{pyver}-jinja2 >= 2.10
 Requires:   python%{pyver}-taskflow >= 2.16.0
 Requires:   python%{pyver}-flask >= 0.10
@@ -148,7 +148,7 @@ Requires:   python%{pyver}-cryptography >= 2.1
 Requires:   python%{pyver}-keystoneauth1 >= 3.4.0
 Requires:   python%{pyver}-oslo-reports >= 1.18.0
 Requires:   python%{pyver}-glanceclient >= 1:2.8.0
-Requires:   python%{pyver}-rfc3986
+Requires:   python%{pyver}-rfc3986 >= 0.3.1
 Requires:   python%{pyver}-pyroute2 >= 0.4.21
 Requires:   python%{pyver}-gunicorn >= 19.9.0
 Requires:   python%{pyver}-cotyledon >= 1.3.0
@@ -157,11 +157,13 @@ Requires:   python%{pyver}-distro >= 1.2.0
 Requires:   python%{pyver}-castellan >= 0.16.0
 Requires:   python%{pyver}-PyMySQL >= 0.7.6
 Requires:   python%{pyver}-futurist >= 1.2.0
-Requires:   python%{pyver}-tenacity >= 5.0.2
+Requires:   python%{pyver}-tenacity >= 5.0.4
 Requires:   python%{pyver}-octavia-lib >= 1.3.1
 Requires:   python%{pyver}-debtcollector >= 1.19.0
 Requires:   python%{pyver}-jsonschema >= 2.6.0
 Requires:   python%{pyver}-cinderclient >= 3.3.0
+Requires:   python%{pyver}-setproctitle >= 1.1.10
+Requires:   python%{pyver}-simplejson >= 3.13.2
 
 # Handle python2 exception
 %if %{pyver} == 2
@@ -293,7 +295,7 @@ Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   dib-utils
-Requires:   diskimage-builder >= 1.18.0
+Requires:   diskimage-builder >= 1.1.2
 
 
 %description diskimage-create
