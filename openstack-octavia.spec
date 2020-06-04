@@ -69,7 +69,7 @@ BuildRequires:  python3-castellan
 BuildRequires:  python3-octavia-lib >= 1.3.1
 BuildRequires:  python3-debtcollector
 BuildRequires:  python3-cinderclient
-
+BuildRequires:  python3-sqlalchemy-utils
 BuildRequires:  python3-requests-mock
 BuildRequires:  python3-netifaces
 
