@@ -307,8 +307,8 @@ rm -rf %{buildroot}%{python3_sitelib}/tools
 install -d -m 755 %{buildroot}%{_sysconfdir}/%{service}
 mv %{buildroot}/usr/etc/%{service}/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
 
-# Move policy.json to proper location
-mv etc/policy/admin_or_owner-policy.json %{buildroot}%{_sysconfdir}/%{service}/policy.json
+# Move policy.yaml to proper location
+mv etc/policy/admin_or_owner-policy.yaml %{buildroot}%{_sysconfdir}/%{service}/policy.yaml
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
@@ -437,7 +437,7 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %dir %{_sysconfdir}/%{service}/conf.d/common
 %attr(-, root, %{service}) %{_datadir}/%{service}/%{service}-dist.conf
 %config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/%{service}.conf
-%config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/policy.json
+%config(noreplace) %attr(0640, root, %{service}) %{_sysconfdir}/%{service}/policy.yaml
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}
 %dir %attr(0755, %{service}, %{service}) %{_sharedstatedir}/%{service}
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
