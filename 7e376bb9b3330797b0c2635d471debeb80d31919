@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c256abec_14f29976",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-09-18T13:01:45Z",
+      "side": 1,
+      "message": "3.2.0 can update as it\u0027s available now",
+      "range": {
+        "startLine": 141,
+        "startChar": 34,
+        "endLine": 141,
+        "endChar": 39
+      },
+      "revId": "7e376bb9b3330797b0c2635d471debeb80d31919",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
