@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 
@@ -8,15 +7,13 @@
 
 Name:       openstack-%{service}
 Version:    7.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
-#
-# patches_base=7.0.0.0rc1
 #
 
 Source1:    %{service}.logrotate
@@ -510,7 +507,8 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 
 %changelog
-* Wed Oct 14 2020 Joel Capitao <jcapitao@redhat.com> 7.0.0-0.1.0rc1
+* Wed Oct 14 2020 RDO <dev@lists.rdoproject.org> 7.0.0-1
+- Update to 7.0.0
 - Enable sources tarball validation using GPG signature.
 
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 7.0.0-0.1.0rc1
