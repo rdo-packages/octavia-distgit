@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a365498a_8c5a1475",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-10-15T01:44:37Z",
+      "side": 1,
+      "message": "This will get conflict, but ok will get resolve during rebase.",
+      "revId": "c02293fd4e6f4ba257d7cb812f4c3c2a95984ba1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
