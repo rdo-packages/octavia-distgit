@@ -39,7 +39,7 @@ BuildRequires:  python3-pbr
 BuildRequires:  python3-setuptools
 BuildRequires:  systemd
 BuildRequires:  openstack-macros
-BuildRequires:  git
+BuildRequires:  git-core
 
 # BuildRequires for running functional tests
 BuildRequires:  python3-stestr
