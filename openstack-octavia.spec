@@ -465,6 +465,7 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %files amphora-agent
 %license LICENSE
 %{_bindir}/amphora-agent
+%{_bindir}/amphora-health-checker
 %{_unitdir}/%{service}-amphora-agent.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
