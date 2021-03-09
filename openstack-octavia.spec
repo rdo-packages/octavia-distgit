@@ -6,7 +6,7 @@
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-Version:    7.1.0
+Version:    7.1.1
 Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
@@ -507,6 +507,9 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 
 %changelog
+* Tue Mar 09 2021 RDO <dev@lists.rdoproject.org> 7.1.1-1
+- Update to 7.1.1
+
 * Thu Jan 28 2021 RDO <dev@lists.rdoproject.org> 7.1.0-1
 - Update to 7.1.0
 
