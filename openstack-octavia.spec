@@ -104,42 +104,41 @@ Summary:    Octavia Python libraries
 Group:      Applications/System
 
 
-Requires:   python3-alembic >= 0.8.10
+Requires:   python3-alembic >= 0.9.6
 Requires:   python3-pecan >= 1.3.2
-Requires:   python3-pbr >= 2.0.0
+Requires:   python3-pbr >= 3.1.1
 Requires:   python3-sqlalchemy >= 1.2.19
-Requires:   python3-babel >= 2.3.4
-Requires:   python3-requests >= 2.14.2
+Requires:   python3-requests >= 2.23.0
 Requires:   python3-keystonemiddleware >= 4.17.0
 Requires:   python3-netaddr >= 0.7.19
 Requires:   python3-neutronclient >= 6.7.0
 Requires:   python3-webob >= 1.8.2
 Requires:   python3-stevedore >= 1.20.0
-Requires:   python3-oslo-config >= 2:5.2.0
-Requires:   python3-oslo-context >= 2.19.2
+Requires:   python3-oslo-config >= 2:6.8.0
+Requires:   python3-oslo-context >= 2.22.0
 Requires:   python3-oslo-db >= 8.3.0
-Requires:   python3-oslo-i18n >= 3.15.3
-Requires:   python3-oslo-serialization >= 2.18.0
-Requires:   python3-oslo-log >= 3.36.0
+Requires:   python3-oslo-i18n >= 3.20.0
+Requires:   python3-oslo-serialization >= 2.28.1
+Requires:   python3-oslo-log >= 4.3.0
 Requires:   python3-oslo-messaging >= 12.4.0
 Requires:   python3-oslo-middleware >= 4.0.1
-Requires:   python3-oslo-policy >= 1.30.0
-Requires:   python3-oslo-utils >= 3.33.0
-Requires:   python3-oslo-upgradecheck >= 0.1.0
+Requires:   python3-oslo-policy >= 3.6.2
+Requires:   python3-oslo-utils >= 4.5.0
+Requires:   python3-oslo-upgradecheck >= 1.3.0
 Requires:   python3-barbicanclient >= 4.5.2
 Requires:   python3-novaclient >= 1:9.1.0
-Requires:   python3-pyOpenSSL >= 18.0.0
+Requires:   python3-pyOpenSSL >= 19.1.0
 Requires:   python3-wsme >= 0.8.0
 Requires:   python3-pyasn1 >= 0.1.8
 Requires:   python3-pyasn1-modules >= 0.0.6
 Requires:   python3-jinja2 >= 2.10
 Requires:   python3-taskflow >= 4.4.0
 Requires:   python3-flask >= 0.10
-Requires:   python3-cryptography >= 2.8
+Requires:   python3-cryptography >= 3.0
 Requires:   python3-keystoneauth1 >= 3.4.0
 Requires:   python3-oslo-reports >= 1.18.0
 Requires:   python3-glanceclient >= 1:2.8.0
-Requires:   python3-rfc3986 >= 0.3.1
+Requires:   python3-rfc3986 >= 1.2.0
 Requires:   python3-pyroute2 >= 0.5.14
 Requires:   python3-gunicorn >= 19.9.0
 Requires:   python3-cotyledon >= 1.3.0
@@ -149,13 +148,13 @@ Requires:   python3-castellan >= 0.16.0
 Requires:   python3-PyMySQL >= 0.8.0
 Requires:   python3-futurist >= 1.2.0
 Requires:   python3-tenacity >= 5.0.4
-Requires:   python3-octavia-lib >= 2.2.0
+Requires:   python3-octavia-lib >= 2.3.0
 Requires:   python3-jsonschema >= 3.2.0
 Requires:   python3-cinderclient >= 3.3.0
 Requires:   python3-setproctitle >= 1.1.10
 Requires:   python3-simplejson >= 3.13.2
 Requires:   python3-sqlalchemy-utils >= 0.30.11
-Requires:   python3-netifaces >= 0.10.4
+Requires:   python3-dateutil >= 2.6.0
 
 
 %description -n python3-%{service}
