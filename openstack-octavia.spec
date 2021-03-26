@@ -20,6 +20,7 @@ Source11:   %{service}-api.service
 Source12:   %{service}-worker.service
 Source13:   %{service}-health-manager.service
 Source14:   %{service}-housekeeping.service
+Source15:   %{service}-driver-agent.service
 
 Source30:   %{service}-dist.conf
 # Required for tarball sources verification
@@ -264,6 +265,19 @@ Requires:   openstack-%{service}-common = %{version}-%{release}
 %{common_desc}
 
 This package contains OpenStack Octavia Housekeeping service.
+
+
+%package driver-agent
+Summary:    OpenStack Octavia Driver Agent service
+Group:      Applications/System
+
+Requires:   openstack-%{service}-common = %{version}-%{release}
+
+
+%description housekeeping
+%{common_desc}
+
+This package contains OpenStack Octavia Driver Agent service.
 
 
 %package diskimage-create
