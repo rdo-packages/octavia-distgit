@@ -22,6 +22,7 @@ Source11:   %{service}-api.service
 Source12:   %{service}-worker.service
 Source13:   %{service}-health-manager.service
 Source14:   %{service}-housekeeping.service
+Source15:   %{service}-driver-agent.service
 
 Source30:   %{service}-dist.conf
 # Required for tarball sources verification
@@ -271,6 +272,19 @@ Requires:   python3-redis >= 2.10.0
 This package contains OpenStack Octavia Housekeeping service.
 
 
+%package driver-agent
+Summary:    OpenStack Octavia Driver Agent service
+Group:      Applications/System
+
+Requires:   openstack-%{service}-common = %{version}-%{release}
+
+
+%description driver-agent
+%{common_desc}
+
+This package contains OpenStack Octavia Driver Agent service.
+
+
 %package diskimage-create
 Summary:    OpenStack Octavia Amphora diskimage-builder script
 Group:      Applications/System
@@ -340,6 +354,7 @@ install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{service}-api.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{service}-worker.service
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{service}-health-manager.service
 install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{service}-housekeeping.service
+install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{service}-driver-agent.service
 
 # Setup directories
 install -d -m 755 %{buildroot}%{_datadir}/%{service}
@@ -353,7 +368,7 @@ install -p -D -m 640 %{SOURCE30} %{buildroot}%{_datadir}/%{service}/%{service}-d
 
 # Create configuration directories for all services that can be populated by users with custom *.conf files
 mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/common
-for service in amphora-agent api health-manager housekeeping worker; do
+for service in amphora-agent api driver-agent health-manager housekeeping worker; do
     mkdir -p %{buildroot}/%{_sysconfdir}/%{service}/conf.d/%{service}-$service
 done
 
@@ -439,6 +454,19 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %postun housekeeping
 %systemd_postun_with_restart %{service}-housekeeping.service
 
+
+%post driver-agent
+%systemd_post %{service}-driver-agent.service
+
+
+%preun driver-agent
+%systemd_preun %{service}-driver-agent.service
+
+
+%postun driver-agent
+%systemd_postun_with_restart %{service}-driver-agent.service
+
+
 %files -n python3-%{service}-tests
 %license LICENSE
 %{python3_sitelib}/%{service}/tests
@@ -505,6 +533,13 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %{_bindir}/%{service}-housekeeping
 %{_unitdir}/%{service}-housekeeping.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-housekeeping
+
+
+%files driver-agent
+%license LICENSE
+%{_unitdir}/%{service}-driver-agent.service
+%dir %{_sysconfdir}/%{service}/conf.d/%{service}-driver-agent
+
 
 %files diskimage-create
 %doc diskimage-create/README.rst
