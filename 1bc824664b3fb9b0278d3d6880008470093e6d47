@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "8588bde0_9fe270b6",
+        "filename": "octavia-driver-agent.service",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2021-03-26T11:10:41Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "a7aafe21_ca04ce95",
+      "range": {
+        "startLine": 8,
+        "startChar": 247,
+        "endLine": 8,
+        "endChar": 257
+      },
+      "revId": "1bc824664b3fb9b0278d3d6880008470093e6d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9550bba_76d52277",
+        "filename": "octavia-driver-agent.service",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2021-03-26T11:10:41Z",
+      "side": 1,
+      "message": "Oops. Sorry that is mistake.",
+      "parentUuid": "b594c095_b950c194",
+      "range": {
+        "startLine": 8,
+        "startChar": 204,
+        "endLine": 8,
+        "endChar": 218
+      },
+      "revId": "1bc824664b3fb9b0278d3d6880008470093e6d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1ebbd3b1_8f0a0221",
         "filename": "openstack-octavia.spec",
         "patchSetId": 3
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "4427d9fd_1d66ea98",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2021-03-26T11:10:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ebbd3b1_8f0a0221",
+      "range": {
+        "startLine": 351,
+        "startChar": 23,
+        "endLine": 351,
+        "endChar": 31
+      },
+      "revId": "1bc824664b3fb9b0278d3d6880008470093e6d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0f18b528_68796427",
         "filename": "openstack-octavia.spec",
         "patchSetId": 3
@@ -91,6 +163,30 @@
       "revId": "1bc824664b3fb9b0278d3d6880008470093e6d47",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "115864dd_e397e137",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2021-03-26T11:10:41Z",
+      "side": 1,
+      "message": "TBH we should have create an independent patch instead of adding that to the common patch...\nAnyway I\u0027ll remove this from this independent package so that it doesn\u0027t cause unexpected deletion during update.",
+      "parentUuid": "0f18b528_68796427",
+      "range": {
+        "startLine": 532,
+        "startChar": 0,
+        "endLine": 532,
+        "endChar": 34
+      },
+      "revId": "1bc824664b3fb9b0278d3d6880008470093e6d47",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
