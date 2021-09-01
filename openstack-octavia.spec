@@ -505,3 +505,4 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia/commit/5dd7ad9ad8998c5285fe60d9ee4210f87ed45ccd
