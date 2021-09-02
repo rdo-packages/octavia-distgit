@@ -1,0 +1,10 @@
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Bernard Cafarelli <bcafarel@redhat.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 02 Sep 2021 10:24:19 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/35244
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
