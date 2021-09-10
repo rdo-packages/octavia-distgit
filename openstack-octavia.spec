@@ -122,12 +122,12 @@ Requires:   python3-oslo-serialization >= 2.28.1
 Requires:   python3-oslo-log >= 4.3.0
 Requires:   python3-oslo-messaging >= 12.4.0
 Requires:   python3-oslo-middleware >= 4.0.1
-Requires:   python3-oslo-policy >= 3.6.2
-Requires:   python3-oslo-utils >= 4.5.0
+Requires:   python3-oslo-policy >= 3.7.0
+Requires:   python3-oslo-utils >= 4.7.0
 Requires:   python3-oslo-upgradecheck >= 1.3.0
 Requires:   python3-barbicanclient >= 4.5.2
 Requires:   python3-novaclient >= 1:9.1.0
-Requires:   python3-pyOpenSSL >= 18.0.0
+Requires:   python3-pyOpenSSL >= 19.0.0
 Requires:   python3-wsme >= 0.8.0
 Requires:   python3-pyasn1 >= 0.1.8
 Requires:   python3-pyasn1-modules >= 0.0.6
@@ -154,7 +154,7 @@ Requires:   python3-cinderclient >= 3.3.0
 Requires:   python3-setproctitle >= 1.1.10
 Requires:   python3-simplejson >= 3.13.2
 Requires:   python3-sqlalchemy-utils >= 0.30.11
-Requires:   python3-dateutil >= 2.6.0
+Requires:   python3-dateutil >= 2.6.1
 
 
 %description -n python3-%{service}
