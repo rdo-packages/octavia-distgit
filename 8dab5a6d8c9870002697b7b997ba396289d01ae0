@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58fa9a47_afd62527",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-10-29T16:07:19Z",
+      "side": 1,
+      "message": "if this is only used in some specific service, as amphora, api or worker server, it may be added as requires in that subpackages instead of python3-redis. What do you think?",
+      "range": {
+        "startLine": 158,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 1
+      },
+      "revId": "8dab5a6d8c9870002697b7b997ba396289d01ae0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
