@@ -22,6 +22,30 @@
       "revId": "8dab5a6d8c9870002697b7b997ba396289d01ae0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5bd01ae_3d5e4437",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2021-10-29T16:10:36Z",
+      "side": 1,
+      "message": "Yeah, it\u0027s only used in worker, housekeeping and health-manager services, I can move the dep there.",
+      "parentUuid": "58fa9a47_afd62527",
+      "range": {
+        "startLine": 158,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 1
+      },
+      "revId": "8dab5a6d8c9870002697b7b997ba396289d01ae0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
