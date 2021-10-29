@@ -155,6 +155,7 @@ Requires:   python3-setproctitle >= 1.1.10
 Requires:   python3-simplejson >= 3.13.2
 Requires:   python3-sqlalchemy-utils >= 0.30.11
 Requires:   python3-dateutil >= 2.6.1
+Requires:   python3-redis >= 2.10.0
 
 
 %description -n python3-%{service}
