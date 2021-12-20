@@ -466,6 +466,10 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %license LICENSE
 %{_bindir}/amphora-agent
 %{_bindir}/amphora-health-checker
+# TODO: remove conditional once new release is out
+%if 0%{?dlrn} > 0
+%{_bindir}/amphora-interface
+%endif
 %{_unitdir}/%{service}-amphora-agent.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
