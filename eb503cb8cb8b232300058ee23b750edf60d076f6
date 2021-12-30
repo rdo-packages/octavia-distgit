@@ -1,0 +1,9 @@
+Code-Review+2: Bernard Cafarelli <bcafarel@redhat.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 30 Dec 2021 05:55:50 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/37436
+Project: openstack/octavia-distgit
+Branch: refs/heads/wallaby-rdo
