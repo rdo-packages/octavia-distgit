@@ -148,7 +148,7 @@ Requires:   python3-castellan >= 0.16.0
 Requires:   python3-PyMySQL >= 0.8.0
 Requires:   python3-futurist >= 1.2.0
 Requires:   python3-tenacity >= 5.0.4
-Requires:   python3-octavia-lib >= 2.3.0
+Requires:   python3-octavia-lib >= 2.5.0
 Requires:   python3-jsonschema >= 3.2.0
 Requires:   python3-cinderclient >= 3.3.0
 Requires:   python3-setproctitle >= 1.1.10
@@ -463,6 +463,7 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %{_bindir}/%{service}-status
 %{_bindir}/%{service}-db-manage
 %{_bindir}/%{service}-driver-agent
+%{_bindir}/prometheus-proxy
 
 %files amphora-agent
 %license LICENSE
