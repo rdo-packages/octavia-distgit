@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6e5906b_1a15f1bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-02-23T08:29:46Z",
+      "side": 1,
+      "message": "we didn\u0027t bump octavia-lib yet, https://review.rdoproject.org/r/c/rdoinfo/+/39573",
+      "revId": "62779da665a830de657ca156506d8be913dc8cce",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
