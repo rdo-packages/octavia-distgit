@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fdb6ef3_c15ef93d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-02-28T08:21:27Z",
+      "side": 1,
+      "message": "@amoralej should we wait for octavia-lib promotion in ooo ?",
+      "revId": "e10753e6e208122502e41403959ea45a175095e8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
