@@ -116,7 +116,6 @@ Requires:   python3-webob >= 1.8.2
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-oslo-config >= 2:6.8.0
 Requires:   python3-oslo-context >= 2.22.0
-Requires:   python3-oslo-db >= 8.3.0
 Requires:   python3-oslo-i18n >= 3.20.0
 Requires:   python3-oslo-serialization >= 2.28.1
 Requires:   python3-oslo-log >= 4.3.0
@@ -133,7 +132,7 @@ Requires:   python3-pyasn1 >= 0.1.8
 Requires:   python3-pyasn1-modules >= 0.0.6
 Requires:   python3-jinja2 >= 2.10
 Requires:   python3-taskflow >= 4.4.0
-Requires:   python3-flask >= 1:0.10
+Requires:   python3-flask >= 1:1.1.2
 Requires:   python3-cryptography >= 3.0
 Requires:   python3-keystoneauth1 >= 3.4.0
 Requires:   python3-oslo-reports >= 1.18.0
@@ -155,6 +154,7 @@ Requires:   python3-setproctitle >= 1.1.10
 Requires:   python3-simplejson >= 3.13.2
 Requires:   python3-sqlalchemy-utils >= 0.30.11
 Requires:   python3-dateutil >= 2.6.1
+Requires:   python3-psutil >= 5.7.1
 
 
 %description -n python3-%{service}
