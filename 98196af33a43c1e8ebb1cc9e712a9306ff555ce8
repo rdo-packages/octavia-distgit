@@ -22,6 +22,30 @@
       },
       "revId": "98196af33a43c1e8ebb1cc9e712a9306ff555ce8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8384f8f5_4d129f80",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-03-16T08:32:47Z",
+      "side": 0,
+      "message": "Good catch, I created a ticket to track this issue https://issues.redhat.com/browse/RDO-32",
+      "parentUuid": "49a8fa90_244d65c3",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 1
+      },
+      "revId": "98196af33a43c1e8ebb1cc9e712a9306ff555ce8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
