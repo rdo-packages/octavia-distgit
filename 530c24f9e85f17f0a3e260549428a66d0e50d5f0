@@ -16,6 +16,23 @@
       "message": "needs python3-tempest",
       "revId": "530c24f9e85f17f0a3e260549428a66d0e50d5f0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "882cf2ce_bc81aa77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-03-30T07:46:38Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "530c24f9e85f17f0a3e260549428a66d0e50d5f0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
