@@ -510,3 +510,4 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 * Wed May 06 2020 RDO <dev@lists.rdoproject.org> 6.0.0-0.1.0rc1
 - Update to 6.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia/commit/3d56e7ad20ec3bf3280ca10f7e3d3754ea197b71
