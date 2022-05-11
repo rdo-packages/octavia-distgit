@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce533bfa_87233770",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-05-11T07:14:19Z",
+      "side": 1,
+      "message": "The commit does not support py36 anymore, so we cannot merge it until DLRN-rpmbuild-centos8 job is removed.\nThe removal of support of CS8 in RDO Trunk master has been announced in RDO Meeting 2022-04-20, and we\u0027ll remove it by friday 2022-05-13 in order to keep tracking master.\nUntil then, we have to keep this FTBFS on hold.",
+      "revId": "325238a61d13a76a7cca36d4288b44e55496fb22",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
