@@ -33,6 +33,24 @@
       "message": "Can we have someone from the neutron team comment on if the default one minute, thirty seconds shutdown time is log enough for their ovn agent plugin? I.e. will it always shutdown inside that window?\nOtherwise we may need to set a longer grace period here:\nDefaultTimeoutStopSec\u003d90s",
       "revId": "2bb30c32b05ce2418f12c8cf618a77e57084f887",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab95aa1f_a304894c",
+        "filename": "octavia-driver-agent.service",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 764
+      },
+      "writtenOn": "2022-06-27T07:17:19Z",
+      "side": 1,
+      "message": "yeah, 90s is more than enough",
+      "parentUuid": "e8704995_243cbb9b",
+      "revId": "2bb30c32b05ce2418f12c8cf618a77e57084f887",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
