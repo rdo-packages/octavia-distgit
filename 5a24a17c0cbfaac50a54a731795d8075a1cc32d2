@@ -1,0 +1,11 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+1: Michael Johnson <johnsomor@gmail.com>
+Code-Review+2: Gregory Thiemonge <gregory.thiemonge@gmail.com>
+Code-Review+1: Fernando Royo <roying@gmail.com>
+Verified+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Submitted-by: Alfredo Moralejo <amoralej@redhat.com>
+Submitted-at: Mon, 27 Jun 2022 08:37:26 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/32779
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
