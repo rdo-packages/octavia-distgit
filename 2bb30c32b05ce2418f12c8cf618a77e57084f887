@@ -18,6 +18,23 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2e0ada3_e76df1a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-06-27T08:30:09Z",
+      "side": 1,
+      "message": "I\u0027ll force the merge. Octavia is FTBFS in cs8 as it\u0027s not longer compatible with 3.6",
+      "revId": "2bb30c32b05ce2418f12c8cf618a77e57084f887",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8704995_243cbb9b",
