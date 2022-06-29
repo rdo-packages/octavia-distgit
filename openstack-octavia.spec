@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x815afec729392386480e076dcc0dfe2d21c023c9
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
@@ -253,7 +253,7 @@ install -d -m 755 %{buildroot}%{_sysconfdir}/%{service}
 mv etc/%{service}.conf %{buildroot}%{_sysconfdir}/%{service}
 
 # Move policy.yaml to proper location
-mv etc/policy/admin_or_owner-policy.yaml %{buildroot}%{_sysconfdir}/%{service}/policy.yaml
+mv etc/policy/keystone_default_roles-policy.yaml %{buildroot}%{_sysconfdir}/%{service}/policy.yaml
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-%{service}
