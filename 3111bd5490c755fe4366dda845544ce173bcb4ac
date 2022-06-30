@@ -39,6 +39,30 @@
       },
       "revId": "3111bd5490c755fe4366dda845544ce173bcb4ac",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4c43952_cde95c1d",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2022-06-30T23:26:13Z",
+      "side": 1,
+      "message": "Thanks for the feedback. May I ask a few questions ?\n\nEven in barbican I see a few definitions to create the directory during installation I can add that to the systemd units, but should we remove these from .spec file ?.\n https://github.com/rdo-packages/barbican-distgit/blob/rpm-master/openstack-barbican.spec#L179\n https://github.com/rdo-packages/barbican-distgit/blob/rpm-master/openstack-barbican.spec#L232\n\nI\u0027ve gone through the other components but most of these are using this metnod (eg. https://github.com/rdo-packages/nova-distgit/blob/rpm-master/openstack-nova.spec#L694 ). Do we need to update the same usage in other packages ?",
+      "parentUuid": "901cd6f3_0f906d32",
+      "range": {
+        "startLine": 490,
+        "startChar": 0,
+        "endLine": 490,
+        "endChar": 1
+      },
+      "revId": "3111bd5490c755fe4366dda845544ce173bcb4ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
