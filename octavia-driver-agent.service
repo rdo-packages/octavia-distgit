@@ -5,6 +5,8 @@ After=syslog.target network.target
 [Service]
 Type=simple
 User=octavia
+RuntimeDirectory=octavia
+RuntimeDirectoryMode=770
 ExecStart=/usr/bin/octavia-driver-agent --config-file /usr/share/octavia/octavia-dist.conf --config-file /etc/octavia/octavia.conf --config-dir /etc/octavia/conf.d/common --config-dir /etc/octavia/conf.d/octavia-driver-agent --log-file /var/log/octavia/driver-agent.log
 PrivateTmp=true
 KillMode=process
