@@ -487,6 +487,7 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}
 %dir %attr(0755, %{service}, %{service}) %{_sharedstatedir}/%{service}
 %dir %attr(0750, %{service}, %{service}) %{_localstatedir}/log/%{service}
+%dir %attr(0750, %{service}, %{service}) %{_localstatedir}/run/%{service}
 %dir %{_datarootdir}/%{service}
 %{_bindir}/haproxy-vrrp-check
 %{_bindir}/%{service}-status
