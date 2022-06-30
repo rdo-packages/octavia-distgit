@@ -358,7 +358,6 @@ install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{service}-driver-agent
 install -d -m 755 %{buildroot}%{_datadir}/%{service}
 install -d -m 755 %{buildroot}%{_sharedstatedir}/%{service}
 install -d -m 755 %{buildroot}%{_localstatedir}/log/%{service}
-install -d -m 755 %{buildroot}%{_localstatedir}/run/%{service}
 
 # Install dist conf
 install -p -D -m 640 %{SOURCE30} %{buildroot}%{_datadir}/%{service}/%{service}-dist.conf
