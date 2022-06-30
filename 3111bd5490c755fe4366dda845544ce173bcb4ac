@@ -16,6 +16,29 @@
       "message": "Yep, LGTM",
       "revId": "3111bd5490c755fe4366dda845544ce173bcb4ac",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "901cd6f3_0f906d32",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-06-30T16:55:00Z",
+      "side": 1,
+      "message": "/var/run is symlink to /run which is tmpfs created on each reboot. To get it created must be managed using RuntimeDirectory statement in unit file:\n\nhttps://www.freedesktop.org/software/systemd/man/systemd.exec.html\n\nThere is an example in barbican:\n\nhttps://github.com/rdo-packages/barbican-distgit/blob/rpm-master/openstack-barbican-api.service#L10-L11",
+      "range": {
+        "startLine": 490,
+        "startChar": 0,
+        "endLine": 490,
+        "endChar": 1
+      },
+      "revId": "3111bd5490c755fe4366dda845544ce173bcb4ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
