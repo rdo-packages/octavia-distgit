@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "828042f0_8ffbca6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-20T06:16:29Z",
+      "side": 1,
+      "message": "As suggestion, you may start with installing the srbac file with a different file name so that users can manually copy it",
+      "revId": "2051e479d03ccf1caaf62a03cea9f2359a5830d2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
