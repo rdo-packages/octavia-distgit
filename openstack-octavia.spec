@@ -22,6 +22,7 @@ Source11:   %{service}-api.service
 Source12:   %{service}-worker.service
 Source13:   %{service}-health-manager.service
 Source14:   %{service}-housekeeping.service
+Source15:   %{service}-prometheus-proxy.service
 
 Source30:   %{service}-dist.conf
 # Required for tarball sources verification
@@ -340,6 +341,7 @@ install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{service}-api.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{service}-worker.service
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{service}-health-manager.service
 install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{service}-housekeeping.service
+install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{service}-prometheus-proxy.service
 
 # Setup directories
 install -d -m 755 %{buildroot}%{_datadir}/%{service}
@@ -382,14 +384,17 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
+%systemd_post %{service}-prometheus-proxy.service
 
 
 %preun amphora-agent
 %systemd_preun %{service}-amphora-agent.service
+%systemd_preun %{service}-prometheus-proxy.service
 
 
 %postun amphora-agent
 %systemd_postun_with_restart %{service}-amphora-agent.service
+%systemd_postun_with_restart %{service}-prometheus-proxy.service
 
 
 %post api
@@ -473,7 +478,9 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 %{_bindir}/amphora-agent
 %{_bindir}/amphora-health-checker
 %{_bindir}/amphora-interface
+%{_bindir}/prometheus-proxy
 %{_unitdir}/%{service}-amphora-agent.service
+%{_unitdir}/%{service}-prometheus-proxy.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-amphora-agent
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-%{service}-amphora-agent
 
