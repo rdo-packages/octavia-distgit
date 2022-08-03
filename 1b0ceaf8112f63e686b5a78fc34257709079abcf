@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "1b0ceaf8112f63e686b5a78fc34257709079abcf",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37d2ac6d_3d33f5a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 638
+      },
+      "writtenOn": "2022-08-03T21:21:34Z",
+      "side": 1,
+      "message": "This should work.\nEven though systemd will create this under /run and upstream expects /var/run, /var/run is symbolic linked to /run so the configuration defaults should be fine.",
+      "revId": "1b0ceaf8112f63e686b5a78fc34257709079abcf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
