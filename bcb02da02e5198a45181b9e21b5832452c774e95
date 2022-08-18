@@ -1,0 +1,9 @@
+Code-Review+2: Gregory Thiemonge <gregory.thiemonge@gmail.com>
+Code-Review+2: Thomas Weininger <devel@weininger.net>
+Workflow+1: Gregory Thiemonge <gregory.thiemonge@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 18 Aug 2022 09:55:13 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/44152
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
