@@ -63,7 +63,6 @@ BuildRequires:  python3-barbicanclient
 BuildRequires:  python3-cryptography
 BuildRequires:  python3-gunicorn
 BuildRequires:  python3-keystoneauth1
-BuildRequires:  python3-netaddr
 BuildRequires:  python3-novaclient
 BuildRequires:  python3-taskflow
 BuildRequires:  python3-neutronclient
@@ -112,7 +111,6 @@ Requires:   python3-pbr >= 3.1.1
 Requires:   python3-sqlalchemy >= 1.2.19
 Requires:   python3-requests >= 2.23.0
 Requires:   python3-keystonemiddleware >= 4.17.0
-Requires:   python3-netaddr >= 0.7.19
 Requires:   python3-neutronclient >= 6.7.0
 Requires:   python3-webob >= 1.8.2
 Requires:   python3-stevedore >= 1.20.0
@@ -129,7 +127,7 @@ Requires:   python3-oslo-utils >= 4.7.0
 Requires:   python3-oslo-upgradecheck >= 1.3.0
 Requires:   python3-barbicanclient >= 4.5.2
 Requires:   python3-novaclient >= 1:9.1.0
-Requires:   python3-pyOpenSSL >= 19.0.0
+Requires:   python3-pyOpenSSL >= 19.1.0
 Requires:   python3-wsme >= 0.8.0
 Requires:   python3-pyasn1 >= 0.1.8
 Requires:   python3-pyasn1-modules >= 0.0.6
@@ -150,13 +148,13 @@ Requires:   python3-castellan >= 0.16.0
 Requires:   python3-PyMySQL >= 0.8.0
 Requires:   python3-futurist >= 1.2.0
 Requires:   python3-tenacity >= 5.0.4
-Requires:   python3-octavia-lib >= 2.5.0
+Requires:   python3-octavia-lib >= 3.1.0
 Requires:   python3-jsonschema >= 3.2.0
 Requires:   python3-cinderclient >= 3.3.0
 Requires:   python3-setproctitle >= 1.1.10
 Requires:   python3-simplejson >= 3.13.2
 Requires:   python3-sqlalchemy-utils >= 0.30.11
-Requires:   python3-dateutil >= 2.6.1
+Requires:   python3-dateutil >= 2.7.0
 Requires:   python3-psutil >= 5.7.1
 
 
