@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9cdce76_6a3cc6ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-09-19T14:24:10Z",
+      "side": 1,
+      "message": "missing dib-utils and diskimage-builder",
+      "revId": "146766daf19a4af5ae5ec4c61714b5a58cd45c1f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
