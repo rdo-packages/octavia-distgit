@@ -317,6 +317,8 @@ export PBR_VERSION=%{version}
 export SKIP_PIP_INSTALL=1
 %{py3_build}
 
+oslo-config-generator --config-file etc/config/octavia-config-generator.conf --output-file etc/%{service}.conf
+
 # Loop through values in octavia-dist.conf and make sure that the values
 # are substituted into the octavia.conf as comments. Some of these values
 # will have been uncommented as a way of upstream setting defaults outside
