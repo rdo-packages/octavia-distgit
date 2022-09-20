@@ -270,7 +270,6 @@ Summary:    OpenStack Octavia Amphora diskimage-builder script
 Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
-Requires:   dib-utils
 Requires:   diskimage-builder >= 2.24.0
 
 
