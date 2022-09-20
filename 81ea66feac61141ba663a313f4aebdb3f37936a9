@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f93cd5a_f68763a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-09-20T10:43:51Z",
+      "side": 1,
+      "message": "It\u0027s not loading the octavia config:\n\nDEBUG: + oslo-config-generator --config-file etc/config/octavia-config-generator.conf --output-file etc/octavia.conf\nDEBUG: WARNING:stevedore.named:Could not load octavia\n\nhttps://logserver.rdoproject.org/27/45127/3/check/DLRN-rpmbuild-centos9/d02a6bd/buildset/centos9/current/rpmbuild.log.gz\n\nWe\u0027ll probably need to manually add the octavia directory to PYTHONPATH or run oslo-config-generator in %install after the module is installed in buildroot instead of in %build.",
+      "revId": "81ea66feac61141ba663a313f4aebdb3f37936a9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
