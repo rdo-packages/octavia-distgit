@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abbbe48b_94a99794",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-09-20T07:56:05Z",
+      "side": 1,
+      "message": "Waiting for https://review.rdoproject.org/r/q/I01b03e9401409a3188fe757edeec24e928bf8556 to be merged before",
+      "revId": "ead19603c6e0fa1ecf39af2d14625452b52a285f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
