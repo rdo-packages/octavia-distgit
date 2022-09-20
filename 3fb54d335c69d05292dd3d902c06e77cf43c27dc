@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83bcab6d_a3750888",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2022-09-20T11:46:39Z",
+      "side": 1,
+      "message": "looks better:\n\n2022-09-20 11:32:33.214719 | rdo-centos-stream | 2022-09-20 11:32:33,214 INFO:dlrn-build-mock:DEBUG: + PYTHONPATH\u003d.\n2022-09-20 11:32:33.214795 | rdo-centos-stream | 2022-09-20 11:32:33,214 INFO:dlrn-build-mock:DEBUG: + oslo-config-generator --config-file etc/config/octavia-config-generator.conf --output-file etc/octavia.conf\n",
+      "revId": "3fb54d335c69d05292dd3d902c06e77cf43c27dc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
