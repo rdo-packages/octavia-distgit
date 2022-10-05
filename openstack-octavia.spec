@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 
@@ -8,15 +7,13 @@
 
 Name:       openstack-%{service}
 Version:    11.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
 URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
-#
-# patches_base=11.0.0.0rc1
 #
 
 Source1:    %{service}.logrotate
@@ -555,6 +552,9 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 
 %changelog
+* Wed Oct 05 2022 RDO <dev@lists.rdoproject.org> 11.0.0-1
+- Update to 11.0.0
+
 * Tue Sep 20 2022 RDO <dev@lists.rdoproject.org> 11.0.0-0.1.0rc1
 - Update to 11.0.0.0rc1
 
