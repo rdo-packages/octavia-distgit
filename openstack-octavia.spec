@@ -109,6 +109,7 @@ Requires:   python3-alembic >= 0.9.6
 Requires:   python3-pecan >= 1.3.2
 Requires:   python3-pbr >= 3.1.1
 Requires:   python3-sqlalchemy >= 1.2.19
+Requires:   python3-sqlalchemy < 1.4.0
 Requires:   python3-requests >= 2.23.0
 Requires:   python3-keystonemiddleware >= 4.17.0
 Requires:   python3-netaddr >= 0.7.19
