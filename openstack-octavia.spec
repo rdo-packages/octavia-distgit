@@ -390,8 +390,7 @@ export OS_TEST_PATH='./%{service}/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 # We do not want to run linter checks here
 rm -f octavia/tests/unit/test_hacking.py
-# Skip test until issue created by https://review.opendev.org/#/c/697128/ is fixed
-PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_package_mapped'
+PYTHON=%{__python3} stestr run
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
