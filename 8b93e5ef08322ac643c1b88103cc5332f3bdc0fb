@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "918c4522_50c93f8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-03-14T16:47:28Z",
+      "side": 1,
+      "message": "there is already rc2 https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/47772",
+      "revId": "8b93e5ef08322ac643c1b88103cc5332f3bdc0fb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
