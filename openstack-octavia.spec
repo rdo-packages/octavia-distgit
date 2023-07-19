@@ -1,13 +1,13 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global service octavia
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-Version:    10.0.0
-Release:    2%{?dist}
+Version:    10.1.0
+Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
@@ -520,6 +520,9 @@ PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_
 
 
 %changelog
+* Wed Jul 19 2023 RDO <dev@lists.rdoproject.org> 10.1.0-1
+- Update to 10.1.0
+
 * Tue Oct 25 2022 RDO <dev@lists.rdoproject.org> 10.0.0-2
 - Add prometheus-proxy service
 
