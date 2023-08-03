@@ -2,6 +2,8 @@
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order bashate sphinx openstackdocstheme pylint
 %global service octavia
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
@@ -10,7 +12,7 @@ Version:    XXX
 Release:    XXX
 Summary:    Octavia, a load balancer implementation for OpenStack
 
-License:    ASL 2.0
+License:    Apache-2.0
 URL:        http://launchpad.net/%{service}/
 
 Source0:    https://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
@@ -37,54 +39,10 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/gpgv2
 %endif
 BuildRequires:  python3-devel
-BuildRequires:  python3-pbr
-BuildRequires:  python3-setuptools
+BuildRequires:  pyproject-rpm-macros
 BuildRequires:  systemd
 BuildRequires:  openstack-macros
 BuildRequires:  git-core
-
-# BuildRequires for running functional tests
-BuildRequires:  python3-stestr
-BuildRequires:  python3-mock
-BuildRequires:  python3-subunit
-BuildRequires:  python3-oslotest
-BuildRequires:  python3-testrepository
-BuildRequires:  python3-testtools
-BuildRequires:  python3-testresources
-BuildRequires:  python3-testscenarios
-BuildRequires:  python3-oslo-utils
-BuildRequires:  python3-oslo-upgradecheck
-BuildRequires:  python3-flask
-BuildRequires:  python3-oslo-config
-BuildRequires:  python3-oslo-log
-BuildRequires:  python3-glanceclient
-BuildRequires:  python3-wsme
-BuildRequires:  python3-barbicanclient
-BuildRequires:  python3-cryptography
-BuildRequires:  python3-gunicorn
-BuildRequires:  python3-keystoneauth1
-BuildRequires:  python3-novaclient
-BuildRequires:  python3-taskflow
-BuildRequires:  python3-neutronclient
-BuildRequires:  python3-oslo-db
-BuildRequires:  python3-oslo-reports
-BuildRequires:  python3-oslo-policy
-BuildRequires:  python3-pecan
-BuildRequires:  python3-pyroute2
-BuildRequires:  python3-pyasn1
-BuildRequires:  python3-oslo-messaging
-BuildRequires:  python3-pyasn1-modules
-BuildRequires:  python3-cotyledon
-BuildRequires:  python3-keystonemiddleware
-BuildRequires:  python3-werkzeug
-BuildRequires:  python3-distro
-BuildRequires:  python3-castellan
-BuildRequires:  python3-octavia-lib >= 1.3.1
-BuildRequires:  python3-debtcollector
-BuildRequires:  python3-cinderclient
-BuildRequires:  python3-sqlalchemy-utils
-BuildRequires:  python3-requests-mock
-BuildRequires:  python3-netifaces
 
 Requires:   python3-%{service} = %{version}-%{release}
 
@@ -101,61 +59,7 @@ Requires(pre): shadow-utils
 
 %package -n python3-%{service}
 Summary:    Octavia Python libraries
-%{?python_provide:%python_provide python3-%{service}}
 Group:      Applications/System
-
-
-Requires:   python3-alembic >= 0.9.6
-Requires:   python3-pecan >= 1.3.2
-Requires:   python3-pbr >= 3.1.1
-Requires:   python3-sqlalchemy >= 1.2.19
-Requires:   python3-requests >= 2.23.0
-Requires:   python3-keystonemiddleware >= 9.5.0
-Requires:   python3-neutronclient >= 6.7.0
-Requires:   python3-webob >= 1.8.2
-Requires:   python3-stevedore >= 1.20.0
-Requires:   python3-oslo-config >= 2:6.8.0
-Requires:   python3-oslo-context >= 2.22.0
-Requires:   python3-oslo-db >= 8.3.0
-Requires:   python3-oslo-i18n >= 3.20.0
-Requires:   python3-oslo-serialization >= 2.28.1
-Requires:   python3-oslo-log >= 4.3.0
-Requires:   python3-oslo-messaging >= 14.1.0
-Requires:   python3-oslo-middleware >= 4.0.1
-Requires:   python3-oslo-policy >= 3.7.0
-Requires:   python3-oslo-utils >= 4.7.0
-Requires:   python3-oslo-upgradecheck >= 1.3.0
-Requires:   python3-barbicanclient >= 4.5.2
-Requires:   python3-novaclient >= 1:9.1.0
-Requires:   python3-pyOpenSSL >= 19.1.0
-Requires:   python3-wsme >= 0.8.0
-Requires:   python3-pyasn1 >= 0.1.8
-Requires:   python3-pyasn1-modules >= 0.0.6
-Requires:   python3-jinja2 >= 2.10
-Requires:   python3-taskflow >= 4.4.0
-Requires:   python3-flask >= 1:1.1.2
-Requires:   python3-cryptography >= 3.0
-Requires:   python3-keystoneauth1 >= 3.4.0
-Requires:   python3-oslo-reports >= 1.18.0
-Requires:   python3-glanceclient >= 1:2.8.0
-Requires:   python3-rfc3986 >= 1.2.0
-Requires:   python3-pyroute2 >= 0.5.14
-Requires:   python3-gunicorn >= 19.9.0
-Requires:   python3-cotyledon >= 1.3.0
-Requires:   python3-werkzeug >= 0.14.1
-Requires:   python3-distro >= 1.2.0
-Requires:   python3-castellan >= 0.16.0
-Requires:   python3-PyMySQL >= 0.8.0
-Requires:   python3-futurist >= 1.2.0
-Requires:   python3-tenacity >= 5.0.4
-Requires:   python3-octavia-lib >= 3.1.0
-Requires:   python3-jsonschema >= 3.2.0
-Requires:   python3-cinderclient >= 3.3.0
-Requires:   python3-setproctitle >= 1.1.10
-Requires:   python3-simplejson >= 3.13.2
-Requires:   python3-sqlalchemy-utils >= 0.30.11
-Requires:   python3-dateutil >= 2.7.0
-Requires:   python3-psutil >= 5.7.1
 
 
 %description -n python3-%{service}
@@ -165,12 +69,10 @@ This package contains the Octavia Python library.
 
 %package -n python3-%{service}-tests
 Summary:    Octavia tests
-%{?python_provide:%python_provide python3-%{service}-tests}
 Group:      Applications/System
 
 Requires:   python3-%{service} = %{version}-%{release}
 
-Requires:   python3-mock
 Requires:   python3-subunit
 Requires:   python3-oslotest
 Requires:   python3-testrepository
@@ -234,7 +136,6 @@ Group:      Applications/System
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   python3-redis >= 2.10.0
 
-
 %description worker
 %{common_desc}
 
@@ -248,7 +149,6 @@ Group:      Applications/System
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   python3-redis >= 2.10.0
 
-
 %description health-manager
 %{common_desc}
 
@@ -261,7 +161,6 @@ Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
 Requires:   python3-redis >= 2.10.0
-
 
 %description housekeeping
 %{common_desc}
@@ -306,17 +205,35 @@ This package contains a diskimage-builder script for creating Octavia Amphora im
 
 find %{service} -name \*.py -exec sed -i '/\/usr\/bin\/env python/{d;q}' {} +
 
-# Let's handle dependencies ourseleves
-rm -f requirements.txt
-rm -rf octavia.egg-info
 
+
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs}; do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
 
 %build
 export PBR_VERSION=%{version}
 export SKIP_PIP_INSTALL=1
-%{py3_build}
+%pyproject_wheel
 
-PYTHONPATH=. oslo-config-generator --config-file etc/config/octavia-config-generator.conf --output-file etc/%{service}.conf
+%install
+%pyproject_install
+
+# Generate config file
+PYTHONPATH="%{buildroot}/%{python3_sitelib}" oslo-config-generator --config-file etc/config/octavia-config-generator.conf --output-file etc/%{service}.conf
 
 # Loop through values in octavia-dist.conf and make sure that the values
 # are substituted into the octavia.conf as comments. Some of these values
@@ -326,9 +243,6 @@ while read name eq value; do
   test "$name" && test "$value" || continue
   sed -ri "0,/^(#)? *$name *=/{s!^(#)? *$name *=.*!# $name = $value!}" etc/%{service}.conf
 done < %{SOURCE30}
-
-%install
-%{py3_install}
 
 # Remove unused files
 rm -rf %{buildroot}%{python3_sitelib}/bin
@@ -387,10 +301,9 @@ exit 0
 
 %check
 export OS_TEST_PATH='./%{service}/tests/unit'
-export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 # We do not want to run linter checks here
 rm -f octavia/tests/unit/test_hacking.py
-PYTHON=%{__python3} stestr run
+%tox -e %{default_toxenv}
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
@@ -474,7 +387,7 @@ PYTHON=%{__python3} stestr run
 %files -n python3-%{service}
 %license LICENSE
 %{python3_sitelib}/%{service}
-%{python3_sitelib}/%{service}-*.egg-info
+%{python3_sitelib}/%{service}-*.dist-info
 %exclude %{python3_sitelib}/%{service}/tests
 
 
