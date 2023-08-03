@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98c3f8c1_55e28c36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-08-03T15:18:09Z",
+      "side": 1,
+      "message": "FTR neutronclient was removed 4 months ago https://review.opendev.org/c/openstack/octavia/+/866327",
+      "revId": "beb6b097c75c8425af21d8efbd1e74d6ee6b5d9b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6dd6c802_c2cbac12",
+        "filename": "openstack-octavia.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-08-03T15:18:09Z",
+      "side": 1,
+      "message": "we can just keep %{?systemd_ordering}",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 6
+      },
+      "revId": "beb6b097c75c8425af21d8efbd1e74d6ee6b5d9b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
