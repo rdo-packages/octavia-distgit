@@ -460,3 +460,4 @@ rm -f octavia/tests/unit/test_hacking.py
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia/commit/c4a162ab40023884d33ecb3cfe3f47801d6023bc
