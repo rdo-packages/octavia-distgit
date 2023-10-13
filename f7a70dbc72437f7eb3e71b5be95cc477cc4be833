@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "f7a70dbc72437f7eb3e71b5be95cc477cc4be833",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b079b5a6_9b12758a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2023-10-13T06:48:40Z",
+      "side": 1,
+      "message": "it looks like an unrelated/random failure, I\u0027ll open a launchpad issue for octavia to track it",
+      "revId": "f7a70dbc72437f7eb3e71b5be95cc477cc4be833",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
