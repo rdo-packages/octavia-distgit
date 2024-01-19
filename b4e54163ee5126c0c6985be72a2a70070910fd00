@@ -1,0 +1,9 @@
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Tom Weininger <tweining@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 19 Jan 2024 07:47:49 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/50924
+Project: openstack/octavia-distgit
+Branch: refs/heads/rpm-master
