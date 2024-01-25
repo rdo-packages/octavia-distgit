@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x815afec729392386480e076dcc0dfe2d21c023c9
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global service octavia
@@ -391,8 +391,9 @@ export OS_TEST_PATH='./%{service}/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 # We do not want to run linter checks here
 rm -f octavia/tests/unit/test_hacking.py
-# Skip test until issue created by https://review.opendev.org/#/c/697128/ is fixed
-PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_package_mapped'
+# Skip test_cmd_get_version_of_installed_package_mapped test until issue created by https://review.opendev.org/#/c/697128/ is fixed
+# Skip test_prometheus_proxy.TestPrometheusProxyCMD.test_mai until https://bugs.launchpad.net/octavia/+bug/2039245 is fixed
+PYTHON=%{__python3} stestr run --black-regex 'test_cmd_get_version_of_installed_package_mapped|octavia.tests.unit.cmd.test_prometheus_proxy.TestPrometheusProxyCMD.test_main'
 
 %post amphora-agent
 %systemd_post %{service}-amphora-agent.service
