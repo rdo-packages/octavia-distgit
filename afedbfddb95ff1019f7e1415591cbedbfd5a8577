@@ -16,6 +16,23 @@
       "message": "recheck it looks like a random failure",
       "revId": "afedbfddb95ff1019f7e1415591cbedbfd5a8577",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e39d530_a7dc1439",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2024-01-25T13:31:43Z",
+      "side": 1,
+      "message": "already reported https://bugs.launchpad.net/octavia/+bug/2039245",
+      "revId": "afedbfddb95ff1019f7e1415591cbedbfd5a8577",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
