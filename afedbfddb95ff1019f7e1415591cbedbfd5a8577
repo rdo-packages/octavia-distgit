@@ -51,6 +51,24 @@
       "parentUuid": "1e39d530_a7dc1439",
       "revId": "afedbfddb95ff1019f7e1415591cbedbfd5a8577",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f47886e_76aaed70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 642
+      },
+      "writtenOn": "2024-02-06T09:24:49Z",
+      "side": 1,
+      "message": "Yeah I think it\u0027s acceptable, at least on \u003c\u003dzed. I would like to keep this test on antelope/2023.1 (it may not be affected because of some python version changes)",
+      "parentUuid": "2f97588d_0ed473f8",
+      "revId": "afedbfddb95ff1019f7e1415591cbedbfd5a8577",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
