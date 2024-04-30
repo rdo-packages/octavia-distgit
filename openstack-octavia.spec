@@ -555,3 +555,4 @@ PYTHON=%{__python3} stestr run
 * Tue Mar 14 2023 RDO <dev@lists.rdoproject.org> 12.0.0-0.1.0rc2
 - Update to 12.0.0.0rc2
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia/commit/d943336c0eb7461838a040e263355003682df960
