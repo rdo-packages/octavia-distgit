@@ -7,7 +7,7 @@
 
 Name:       openstack-%{service}
 Version:    12.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
 License:    ASL 2.0
@@ -133,7 +133,7 @@ Requires:   python3-pyOpenSSL >= 19.1.0
 Requires:   python3-wsme >= 0.8.0
 Requires:   python3-pyasn1 >= 0.1.8
 Requires:   python3-pyasn1-modules >= 0.0.6
-Requires:   python3-jinja2 >= 2.10
+Requires:   python3-jinja2 >= 3.0.0
 Requires:   python3-taskflow >= 4.4.0
 Requires:   python3-flask >= 1:1.1.2
 Requires:   python3-cryptography >= 3.0
@@ -549,6 +549,9 @@ PYTHON=%{__python3} stestr run
 
 
 %changelog
+* Tue May 21 2024 Tobias Urdin <tobias.urdin@binero.com> 12.0.0-2
+- Fix jinja2 requires
+
 * Fri Mar 31 2023 RDO <dev@lists.rdoproject.org> 12.0.0-1
 - Update to 12.0.0
 
