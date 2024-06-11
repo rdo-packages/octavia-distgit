@@ -1,0 +1,37 @@
+Author: karolinku <kkula@redhat.com>
+Date:   Tue Jun 11 12:41:00 2024 +0200
+
+    Revert "Replace use of deprecated cert.not_valid_after"
+    
+    This reverts commit 310cf313bc9917d5983cf55527ba5bce97bb96e9.
+
+diff --git a/octavia/common/tls_utils/cert_parser.py b/octavia/common/tls_utils/cert_parser.py
+index 47fd4d88..2b14ad07 100644
+--- a/octavia/common/tls_utils/cert_parser.py
++++ b/octavia/common/tls_utils/cert_parser.py
+@@ -300,7 +300,7 @@ def get_cert_expiration(certificate_pem):
+     try:
+         cert = x509.load_pem_x509_certificate(certificate_pem,
+                                               backends.default_backend())
+-        return cert.not_valid_after_utc
++        return cert.not_valid_after
+     except Exception as e:
+         LOG.exception('Unreadable Certificate.')
+         raise exceptions.UnreadableCert from e
+diff --git a/octavia/tests/unit/common/tls_utils/test_cert_parser.py b/octavia/tests/unit/common/tls_utils/test_cert_parser.py
+index eafc0d61..145bb45a 100644
+--- a/octavia/tests/unit/common/tls_utils/test_cert_parser.py
++++ b/octavia/tests/unit/common/tls_utils/test_cert_parser.py
+@@ -246,10 +246,7 @@ class TestTLSParseUtils(base.TestCase):
+ 
+     def test_get_cert_expiration(self):
+         exp_date = cert_parser.get_cert_expiration(sample_certs.X509_EXPIRED)
+-        self.assertEqual(
+-            datetime.datetime(2016, 9, 25, 18, 1, 54,
+-                              tzinfo=datetime.timezone.utc),
+-            exp_date)
++        self.assertEqual(datetime.datetime(2016, 9, 25, 18, 1, 54), exp_date)
+ 
+         # test the exception
+         self.assertRaises(exceptions.UnreadableCert,
+
