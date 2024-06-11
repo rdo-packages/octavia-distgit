@@ -32,6 +32,8 @@ Source101:        https://tarballs.openstack.org/%{service}/%{service}-%{upstrea
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
+Patch:      revert_replace_of_deprecated_cert_not_valid_after.patch
+
 BuildArch:      noarch
 
 # Required for tarball sources verification
@@ -205,6 +207,9 @@ sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Follow up of https://review.opendev.org/c/openstack/octavia/+/921752
+sed -i 's/cryptography.*/cryptography>=3.0/g' requirements.txt
 
 # Exclude some bad-known BRs
 for pkg in %{excluded_brs}; do
