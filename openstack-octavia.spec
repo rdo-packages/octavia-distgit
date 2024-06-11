@@ -32,6 +32,8 @@ Source101:        https://tarballs.openstack.org/%{service}/%{service}-%{upstrea
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
+Patch:      revert_replace_of_deprecated_cert_not_valid_after.patch
+
 BuildArch:      noarch
 
 # Required for tarball sources verification
