@@ -131,6 +131,7 @@ Summary:    OpenStack Octavia Consumer service
 Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
+Requires:   python3-redis >= 2.10.0
 
 %description worker
 %{common_desc}
@@ -143,6 +144,7 @@ Summary:    OpenStack Octavia Health-Manager service
 Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
+Requires:   python3-redis >= 2.10.0
 
 %description health-manager
 %{common_desc}
@@ -155,6 +157,7 @@ Summary:    OpenStack Octavia Housekeeping service
 Group:      Applications/System
 
 Requires:   openstack-%{service}-common = %{version}-%{release}
+Requires:   python3-redis >= 2.10.0
 
 %description housekeeping
 %{common_desc}
