@@ -16,6 +16,23 @@
       "message": "LGTM thx Yatin!",
       "revId": "db044787f25dc135057a932fd5b652371177a49f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73d39be5_fd7a1727",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 638
+      },
+      "writtenOn": "2025-05-16T14:45:32Z",
+      "side": 1,
+      "message": "We also need to fix the Apache mod_wsgi config for the removal of this script.",
+      "revId": "db044787f25dc135057a932fd5b652371177a49f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
