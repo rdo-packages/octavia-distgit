@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60cc707d_04f381a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 764
+      },
+      "writtenOn": "2025-05-16T10:37:12Z",
+      "side": 1,
+      "message": "LGTM thx Yatin!",
+      "revId": "db044787f25dc135057a932fd5b652371177a49f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
