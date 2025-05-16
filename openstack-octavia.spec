@@ -423,7 +423,6 @@ rm -f octavia/tests/unit/test_hacking.py
 %files api
 %license LICENSE
 %{_bindir}/%{service}-api
-%{_bindir}/%{service}-wsgi
 %{_unitdir}/%{service}-api.service
 %dir %{_sysconfdir}/%{service}/conf.d/%{service}-api
 
