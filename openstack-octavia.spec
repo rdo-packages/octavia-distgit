@@ -24,6 +24,7 @@ Source13:   %{service}-health-manager.service
 Source14:   %{service}-housekeeping.service
 Source15:   %{service}-driver-agent.service
 Source16:   %{service}-prometheus-proxy.service
+Source17:   %{service}-wsgi
 
 Source30:   %{service}-dist.conf
 # Required for tarball sources verification

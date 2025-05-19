@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+#PBR Generated from 'wsgi_scripts' - Archived for Octavia stable branches
+
+import threading
+
+from octavia.api.app import setup_app
+
+
+application = None
+app_lock = threading.Lock()
+
+with app_lock:
+    if application is None:
+        application = setup_app()
