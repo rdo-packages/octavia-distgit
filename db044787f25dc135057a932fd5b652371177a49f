@@ -33,6 +33,23 @@
       "message": "We also need to fix the Apache mod_wsgi config for the removal of this script.",
       "revId": "db044787f25dc135057a932fd5b652371177a49f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2c711ac_dc864daf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 638
+      },
+      "writtenOn": "2025-05-19T19:09:14Z",
+      "side": 1,
+      "message": "Alternate patch proposed: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/57669",
+      "revId": "db044787f25dc135057a932fd5b652371177a49f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
