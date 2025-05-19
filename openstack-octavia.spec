@@ -24,6 +24,7 @@ Source13:   %{service}-health-manager.service
 Source14:   %{service}-housekeeping.service
 Source15:   %{service}-driver-agent.service
 Source16:   %{service}-prometheus-proxy.service
+Source17:   %{service}-wsgi
 
 Source30:   %{service}-dist.conf
 # Required for tarball sources verification
@@ -290,6 +291,9 @@ install -m 755 diskimage-create/diskimage-create.sh %{buildroot}%{_bindir}/%{ser
 rm -rf %{buildroot}%{_datadir}/%{service}/diskimage-create
 rm -rf %{buildroot}%{_datadir}/%{service}/LICENSE
 rm -rf %{buildroot}%{_datadir}/%{service}/README.rst
+
+# Install the octavia-wsgi compatibility file
+install -m 755 %{SOURCE17} %{buildroot}%{_bindir}/%{service}-wsgi
 
 %pre common
 getent group %{service} >/dev/null || groupadd -r %{service}
