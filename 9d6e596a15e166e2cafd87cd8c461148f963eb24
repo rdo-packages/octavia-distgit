@@ -1,0 +1,10 @@
+Workflow+1: Gregory Thiemonge <gthiemon@redhat.com>
+Code-Review+1: Omer Schwartz <omersch381@gmail.com>
+Code-Review+1: Brent Eagles <beagles@redhat.com>
+Code-Review+2: Gregory Thiemonge <gthiemon@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 06 Jun 2025 13:42:56 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-distgit/+/57791
+Project: openstack/octavia-distgit
+Branch: refs/heads/antelope-rdo
