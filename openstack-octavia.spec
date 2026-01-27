@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
@@ -8,7 +8,7 @@
 %global common_desc Octavia is an Operator-grade open source scalable load balancer.
 
 Name:       openstack-%{service}
-Version:    15.0.0
+Version:    15.1.0
 Release:    1%{?dist}
 Summary:    Octavia, a load balancer implementation for OpenStack
 
@@ -467,6 +467,9 @@ rm -f octavia/tests/unit/test_hacking.py
 
 
 %changelog
+* Tue Jan 27 2026 RDO <dev@lists.rdoproject.org> 15.1.0-1
+- Update to 15.1.0
+
 * Wed Oct 02 2024 RDO <dev@lists.rdoproject.org> 15.0.0-1
 - Update to 15.0.0
 
