@@ -468,3 +468,4 @@ rm -f octavia/tests/unit/test_hacking.py
 * Mon Mar 18 2024 RDO <dev@lists.rdoproject.org> 14.0.0-0.1.0rc1
 - Update to 14.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia/commit/c950bf95ecb3f1692f946573c046c7bb30ad28c6
